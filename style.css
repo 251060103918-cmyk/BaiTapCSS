@@ -1,6 +1,6 @@
 
 /* =====================================
-   CSS CHUNG
+   1. GENERAL
 ===================================== */
 
 * {
@@ -9,613 +9,452 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-
-    line-height: 1.6;
-    letter-spacing: 0.3px;
-
+    color: #333333;
+    background-color: #f0f4f8;
     margin: 0;
     padding: 0;
-
-    background-color: #f0f8ff;
-
-    color: #333333;
+    line-height: 1.6;
 }
-
-
-/* =====================================
-   HEADER
-===================================== */
-
-header {
-    background-image: linear-gradient(
-        to right,
-        #b3d9ff,
-        #e6f2ff
-    );
-
-    padding: 30px 15px;
-
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-
-    font-weight: bold;
-
-    margin: 0;
-}
-
-.subtitle {
-    font-size: 1rem;
-
-    color: rgb(60, 80, 100);
-}
-
-
-/* =====================================
-   TIÊU ĐỀ
-===================================== */
-
-h1,
-h2 {
-    text-align: center;
-
-    color: #17365d;
-}
-
-h2 {
-    font-size: 1.5rem;
-
-    margin-bottom: 20px;
-}
-
-
-/* =====================================
-   MAIN
-===================================== */
 
 main {
-    width: 95%;
-
+    width: 90%;
     max-width: 1100px;
-
     margin: 30px auto;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
 
 /* =====================================
-   BÀI 1: PROFILE CARD
+   2. HEADER
 ===================================== */
 
-.profile {
-    width: 100%;
+.page-header {
+    background-image: linear-gradient(
+        135deg,
+        #d9eaf7,
+        #a8cfee
+    );
 
-    max-width: 700px;
-
-    margin: 0 auto 40px auto;
-
-    padding: 30px;
-
-    background-color: white;
-
-    border: 2px solid #b3d9ff;
-
-    border-radius: 20px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
+    padding: 30px 20px;
     text-align: center;
 }
 
-
-/* ID Selector */
-
-#avatar {
-    display: block;
-
-    width: 180px;
-    height: 180px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 5px solid #b3d9ff;
-
-    margin: 15px auto;
-}
-
-
-/* Element Selector */
-
-p {
-    font-size: 1rem;
-
-    line-height: 1.8;
-}
-
-
-/* Descendant Selector */
-
-.profile p {
-    text-align: left;
-
-    margin: 10px 0;
-}
-
-
-/* Class Selector */
-
-.profile-info {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-
-    max-width: 450px;
-
-    margin: 20px auto;
-
-    text-align: left;
-}
-
-.profile-info label {
+.page-header h1 {
+    font-size: 32px;
     font-weight: bold;
+    margin: 0 0 10px;
 }
 
-.profile-info input {
-    width: 100%;
-
-    padding: 12px;
-
-    font-size: 1rem;
-
-    border: 1px solid #cccccc;
-
-    border-radius: 8px;
-}
-
-
-/* Sở thích */
-
-.hobbies {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 15px;
-
-    max-width: 300px;
-
-    margin: 20px auto;
-}
-
-.hobbies label {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    width: 100%;
-
-    padding: 12px 15px;
-
-    background-color: #f0f8ff;
-
-    border: 1px solid #b3d9ff;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-}
-
-
-/* Hover sở thích */
-
-.hobbies label:hover {
-    background-color: #b3d9ff;
-
-    color: #17365d;
-}
-
-
-/* Checkbox */
-
-.hobbies input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-
-    cursor: pointer;
-}
-
-
-/* Link */
-
-a {
-    color: #0066cc;
-
-    text-decoration: none;
-
-    font-weight: bold;
-}
-
-
-/* Pseudo-class */
-
-a:hover {
-    color: #ff6600;
-
-    text-decoration: underline;
+.subtitle {
+    font-size: 16px;
+    color: #333333;
+    margin: 0;
 }
 
 
 /* =====================================
-   BÀI 2: BẢNG ĐIỂM
+   3. SECTION CARD
 ===================================== */
 
-.score-section {
+.section-card {
     width: 100%;
+    background-color: #ffffff;
 
-    margin: 40px auto;
+    padding: 25px;
 
-    padding: 30px;
-
-    background-color: white;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Position Relative */
-
-.table-container {
-    position: relative;
-
-    width: 100%;
-
-    max-width: 900px;
-
-    margin: 40px auto 30px auto;
-
-    padding: 35px 15px 15px;
-
-    border: 2px solid #b3d9ff;
-
+    border: 1px solid #d0d7de;
     border-radius: 12px;
 
-    background-color: white;
+    margin-bottom: 30px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-
-/* Position Absolute */
-
-.table-label {
-    position: absolute;
-
-    top: -18px;
-
-    right: 20px;
-
-    padding: 5px 20px;
-
-    background-color: #17365d;
-
-    color: white;
-
-    font-size: 0.9rem;
-
-    font-weight: bold;
-
-    border-radius: 8px;
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-
-/* Table */
-
-table {
-    width: 100%;
-
-    max-width: 850px;
-
-    margin: auto;
-
-    border-collapse: collapse;
-
-    font-size: 0.95rem;
-}
-
-
-/* Table Cell */
-
-th,
-td {
-    padding: 12px 10px;
-
-    border: 1px solid #cccccc;
-
-    text-align: left;
-}
-
-
-/* Table Header */
-
-thead {
-    background-color: #17365d;
-
-    color: white;
-}
-
-
-/* Center STT */
-
-th:first-child,
-td:first-child {
-    width: 60px;
-
-    text-align: center;
-}
-
-
-/* Center Điểm */
-
-th:last-child,
-td:last-child {
-    width: 120px;
-
-    text-align: center;
-}
-
-
-/* Input trong bảng */
-
-td input {
-    display: block;
-
-    width: 100%;
-
-    min-width: 0;
-
-    padding: 8px;
-
-    font-size: 0.9rem;
-
-    border: 1px solid #cccccc;
-
-    border-radius: 5px;
-}
-
-
-/* Zebra Stripes */
-
-tbody tr:nth-child(odd) {
-    background-color: #f2f8ff;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #e0efff;
-}
-
-
-/* Hover Row */
-
-tbody tr:hover {
-    background-color: #b3d9ff;
-}
-
-
-/* Average Score */
-
-tfoot {
-    background-color: #d9ead3;
-
-    font-weight: bold;
-
-    color: #17365d;
-}
-
-tfoot td {
-    font-weight: bold;
-}
-
-
-/* =====================================
-   BÀI 3: FORM ĐĂNG KÝ
-===================================== */
-
-.register-section {
-    width: 100%;
-
-    margin: 40px auto;
-
-    padding: 30px;
-
-    background-color: white;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Form Container */
-
-.form-container {
-    position: relative;
-
-    width: 100%;
-
-    max-width: 700px;
-
-    margin: 40px auto 20px auto;
-
-    padding: 40px 25px 25px;
-
-    background-color: #f8fbff;
-
-    border: 2px solid #b3d9ff;
-
-    border-radius: 15px;
-}
-
-
-/* Position Absolute */
-
-.form-label {
-    position: absolute;
-
-    top: -18px;
-
-    right: 20px;
-
-    padding: 5px 15px;
-
-    background-color: #17365d;
-
-    color: white;
-
-    font-weight: bold;
-
-    font-size: 0.9rem;
-
-    border-radius: 8px;
-}
-
-
-/* Form */
-
-form {
-    width: 100%;
-}
-
-
-/* Flexbox: Họ tên và Email */
-
-.form-row {
-    display: flex;
-
-    flex-direction: row;
-
-    flex-wrap: wrap;
-
-    gap: 20px;
-}
-
-
-/* Form Group */
-
-.form-group {
-    display: flex;
-
-    flex-direction: column;
-
-    width: 100%;
-
+.description {
+    color: #555555;
     margin-bottom: 20px;
 }
 
 
-/* Họ tên và Email */
+/* =====================================
+   4. FORM GROUP
+===================================== */
 
-.form-row .form-group {
-    flex: 1 1 250px;
-
-    min-width: 0;
+.form-group {
+    margin-bottom: 18px;
 }
 
-
-/* Label */
-
-.form-group > label {
-    margin-bottom: 8px;
-
+.form-group label {
+    display: block;
     font-weight: bold;
-
-    color: #17365d;
+    margin-bottom: 6px;
 }
 
-
-/* Input */
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
+input,
 select,
 textarea {
-    width: 100%;
-
-    padding: 12px;
-
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 
-    font-size: 1rem;
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    display: block;
 
-    border: 1px solid #cccccc;
+    width: 100%;
+    max-width: 100%;
 
-    border-radius: 8px;
+    padding: 10px;
 
-    background-color: white;
+    border: 1px solid #b8c2cc;
+    border-radius: 6px;
 
-    transition: border-color 0.3s;
+    background-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
 }
 
 
-/* Focus */
+/* =====================================
+   5. INPUT FOCUS
+===================================== */
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
 
-    border: 2px solid #0066cc;
+    border-color: #2878c7;
 
-    background-color: #f0f8ff;
+    box-shadow: 0 0 0 3px rgba(40, 120, 199, 0.2);
 }
 
 
-/* Radio and Checkbox */
+/* =====================================
+   6. HOBBIES
+===================================== */
 
-.inline-options {
+.hobbies {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hobbies label {
+    display: inline-block;
+
+    padding: 8px 12px;
+
+    margin: 4px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.hobbies input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+
+/* =====================================
+   7. LINKS
+===================================== */
+
+a {
+    color: #145da0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #083d70;
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   8. BUTTONS
+===================================== */
+
+.button {
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 10px 22px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.primary {
+    color: #ffffff;
+    background-color: #1769aa;
+}
+
+.primary:hover {
+    background-color: #0d4e83;
+}
+
+.secondary {
+    color: #333333;
+    background-color: #e1e5e9;
+}
+
+.secondary:hover {
+    background-color: #cbd2d9;
+}
+
+
+/* =====================================
+   9. SCORE TABLE
+===================================== */
+
+.score-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 35px auto 0;
+}
+
+.score-label {
+    position: absolute;
+
+    top: -30px;
+    right: 0;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #174a7e;
+}
+
+
+/* Table */
+
+.score-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    background-color: #ffffff;
+}
+
+
+/* Table borders */
+
+.score-table th,
+.score-table td {
+    border: 1px solid #aeb9c4;
+
+    padding: 10px;
+
+    text-align: left;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Table heading */
+
+.score-table thead {
+    background-color: #174a7e;
+    color: #ffffff;
+}
+
+.score-table th {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Column widths */
+
+.stt-column {
+    width: 8%;
+}
+
+.grade-column {
+    width: 18%;
+}
+
+.score-column {
+    width: 18%;
+}
+
+
+/* STT */
+
+.center {
+    text-align: center !important;
+}
+
+
+/* Table inputs */
+
+.score-table input {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 7px;
+
+    border: 1px solid #c5cdd5;
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+
+
+/* Odd rows */
+
+.score-table tbody tr:nth-child(odd) {
+    background-color: #f2f7fc;
+}
+
+
+/* Even rows */
+
+.score-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+
+/* Table hover */
+
+.score-table tbody tr:hover {
+    background-color: #dceeff;
+}
+
+
+/* Average row */
+
+.score-table tfoot {
+    background-color: #d9eaf7;
+
+    font-weight: bold;
+}
+
+.score-table tfoot td {
+    font-weight: bold;
+}
+
+.average-label {
+    text-align: right !important;
+}
+
+
+/* =====================================
+   10. REGISTRATION FORM
+===================================== */
+
+.registration-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 40px auto 0;
+
+    padding: 25px;
+
+    border: 1px solid #c5d0db;
+    border-radius: 10px;
+
+    background-color: #f8fbff;
+}
+
+
+/* Position label */
+
+.registration-label {
+    position: absolute;
+
+    top: -16px;
+    right: 20px;
+
+    padding: 5px 12px;
+
+    background-color: #174a7e;
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Flexbox: Full name + email */
+
+.form-row {
     display: flex;
 
     flex-direction: row;
 
-    flex-wrap: wrap;
+    gap: 20px;
 
-    align-items: center;
-
-    gap: 15px;
+    align-items: flex-start;
 }
 
-.inline-options label {
+.form-row .form-group {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* Radio and checkbox group */
+
+.choice-group {
     display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+
+    align-items: center;
+}
+
+.choice-group label {
+    display: inline-flex;
 
     align-items: center;
 
-    gap: 5px;
+    gap: 6px;
+
+    font-weight: normal;
 
     cursor: pointer;
 }
 
 
-/* Button Flexbox */
+/* Button flexbox */
 
-.form-buttons {
+.button-group {
     display: flex;
-
-    flex-direction: row;
 
     justify-content: center;
 
@@ -627,122 +466,92 @@ textarea:focus {
 }
 
 
-/* Register Button */
-
-button {
-    padding: 12px 30px;
-
-    font-size: 1rem;
-
-    font-weight: bold;
-
-    color: white;
-
-    background-color: #0066cc;
-
-    border: none;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-}
-
-
-/* Button Hover */
-
-button:hover {
-    background-color: #004080;
-}
-
-
-/* Reset Button */
-
-.reset-button {
-    background-color: #777777;
-}
-
-.reset-button:hover {
-    background-color: #444444;
-}
-
-
 /* =====================================
-   FOOTER
+   11. FOOTER
 ===================================== */
 
-footer {
-    background-color: #17365d;
-
-    color: white;
-
-    text-align: center;
+.page-footer {
+    background-color: #d9eaf7;
 
     padding: 20px;
 
-    margin-top: 40px;
+    text-align: center;
+
+    margin-top: 30px;
 }
 
-footer p {
-    margin: 5px;
+.page-footer p {
+    margin: 0;
 }
 
 
 /* =====================================
-   RESPONSIVE
+   12. RESPONSIVE
 ===================================== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     main {
         width: 95%;
+        margin: 20px auto;
     }
 
-    .profile,
-    .score-section,
-    .register-section {
+    .section-card {
         padding: 15px;
     }
 
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /* Full name and email stack vertically */
+
     .form-row {
         flex-direction: column;
-
         gap: 0;
     }
 
     .form-row .form-group {
-        flex: 1 1 auto;
+        width: 100%;
     }
 
-    table {
-        font-size: 0.8rem;
-    }
+    /* Table */
 
-    th,
-    td {
-        padding: 8px 5px;
-    }
-
-    td input {
-        font-size: 0.75rem;
-
+    .score-table th,
+    .score-table td {
         padding: 5px;
+        font-size: 12px;
     }
 
-    .inline-options {
-        flex-direction: column;
+    .score-table input {
+        padding: 5px;
+        font-size: 12px;
+    }
 
-        align-items: flex-start;
+    .score-label {
+        font-size: 12px;
+    }
 
+    /* Registration form */
+
+    .registration-container {
+        padding: 15px;
+    }
+
+    .choice-group {
         gap: 10px;
     }
 
-    .form-buttons {
+    .button-group {
         flex-direction: column;
     }
 
-    button {
+    .button-group .button {
         width: 100%;
     }
+
 }
