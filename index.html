@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,13 +22,12 @@
             font-style: italic;
         }
 
-        .hobbies li {
+        .hobbies label {
             font-size: 1.1rem;
             font-weight: 500;
-            margin-bottom: 10px;
         }
 
-        .hobbies li:hover {
+        .hobbies label:hover {
             background-color: #b3d9ff;
             color: #17365d;
         }
@@ -37,7 +36,7 @@
 
 <body>
 
-    <!-- ================= BÀI 1 ================= -->
+    <!-- HEADER -->
     <header>
         <h1 style="color: darkblue;">
             BÀI TẬP THỰC HÀNH CSS
@@ -50,50 +49,70 @@
 
     <main>
 
-        <!-- Bài 1: Thông tin cá nhân -->
+        <!-- ================= BÀI 1 ================= -->
+
         <section class="profile">
+
             <h2>BÀI 1: THÔNG TIN CÁ NHÂN</h2>
 
+            <!-- Ảnh đại diện -->
             <img
                 id="avatar"
                 src="3.jpg"
-                alt="Ảnh đại diện Vũ Việt Nhật"
+                alt="Ảnh đại diện"
             >
 
             <div class="profile-info">
-                <p>
-                    <strong>Họ và tên:</strong>
-                    Vũ Việt Nhật
-                </p>
 
                 <p>
                     <strong>Năm sinh:</strong>
-                    07/02/2007
+                    <span>07/02/2007</span>
                 </p>
 
-                <p>
-                    <strong>Sở thích:</strong>
-                    Cầu lông, Chơi Game
-                </p>
             </div>
 
-            <h2>Danh sách sở thích</h2>
+            <h2>Sở thích</h2>
 
-            <ul class="hobbies">
-                <li>Cầu lông</li>
-                <li>Chơi Game</li>
-            </ul>
+            <!-- Checkbox sở thích -->
+            <div class="hobbies">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobby"
+                        value="caulong"
+                        checked
+                    >
+                    Cầu lông
+                </label>
+
+                <br><br>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobby"
+                        value="game"
+                    >
+                    Chơi Game
+                </label>
+
+            </div>
 
             <p>
-                <a href="https://www.phenikaa-uni.edu.vn/"
-                   target="_blank">
+                <a
+                    href="https://www.phenikaa-uni.edu.vn/"
+                    target="_blank"
+                >
                     Trường Đại học Phenikaa
                 </a>
             </p>
+
         </section>
 
 
         <!-- ================= BÀI 2 ================= -->
+
         <section class="score-section">
 
             <h2>BÀI 2: BẢNG ĐIỂM SINH VIÊN</h2>
@@ -119,7 +138,7 @@
                         <tr>
                             <td>1</td>
                             <td>Kỹ năng giao tiếp và làm việc nhóm</td>
-                            <td>B+</td>
+                            <td></td>
                         </tr>
 
                         <tr>
@@ -127,13 +146,13 @@
                             <td>
                                 Nhập môn Khoa học dữ liệu và trí tuệ nhân tạo
                             </td>
-                            <td>B</td>
+                            <td></td>
                         </tr>
 
                         <tr>
                             <td>3</td>
                             <td>Triết học Mác - Lê nin</td>
-                            <td>B</td>
+                            <td></td>
                         </tr>
 
                         <tr>
@@ -141,83 +160,38 @@
                             <td>
                                 Phương pháp nghiên cứu khoa học trong kinh tế
                             </td>
-                            <td>C</td>
+                            <td></td>
                         </tr>
 
                         <tr>
                             <td>5</td>
                             <td>Marketing căn bản</td>
-                            <td>C</td>
+                            <td></td>
                         </tr>
 
                     </tbody>
 
                     <tfoot>
+
                         <tr>
                             <td colspan="2">
                                 Điểm trung bình
                             </td>
 
-                            <td>6</td>
+                            <td></td>
                         </tr>
+
                     </tfoot>
 
                 </table>
 
             </div>
 
-            <h3 class="grade-title">
-                Điểm trung bình từng học phần
-            </h3>
-
-            <table class="grade-table">
-
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Học phần</th>
-                        <th>Điểm trung bình</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Kỹ năng giao tiếp và làm việc nhóm</td>
-                        <td>8,1</td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Nhập môn Khoa học dữ liệu và trí tuệ nhân tạo</td>
-                        <td>7,6</td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Triết học Mác - Lê nin</td>
-                        <td>7</td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Phương pháp nghiên cứu khoa học trong kinh tế</td>
-                        <td>5,7</td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>Marketing căn bản</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
         </section>
 
 
         <!-- ================= BÀI 3 ================= -->
+
         <section class="register-section">
 
             <h2>BÀI 3: FORM ĐĂNG KÝ SINH VIÊN</h2>
@@ -230,9 +204,11 @@
 
                 <form action="#" method="post">
 
+                    <!-- Họ tên và Email -->
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label for="fullname">
                                 Họ và tên
                             </label>
@@ -244,9 +220,11 @@
                                 placeholder="Nhập họ và tên"
                                 required
                             >
+
                         </div>
 
                         <div class="form-group">
+
                             <label for="email">
                                 Email
                             </label>
@@ -258,11 +236,13 @@
                                 placeholder="Nhập email"
                                 required
                             >
+
                         </div>
 
                     </div>
 
 
+                    <!-- Ngày sinh -->
                     <div class="form-group">
 
                         <label for="birth">
@@ -278,6 +258,7 @@
                     </div>
 
 
+                    <!-- Giới tính -->
                     <div class="form-group">
 
                         <label>Giới tính</label>
@@ -316,6 +297,7 @@
                     </div>
 
 
+                    <!-- Sở thích -->
                     <div class="form-group">
 
                         <label>Sở thích</label>
@@ -354,6 +336,7 @@
                     </div>
 
 
+                    <!-- Ngành học -->
                     <div class="form-group">
 
                         <label for="major">
@@ -383,6 +366,7 @@
                     </div>
 
 
+                    <!-- Ghi chú -->
                     <div class="form-group">
 
                         <label for="message">
@@ -399,13 +383,17 @@
                     </div>
 
 
+                    <!-- Buttons -->
                     <div class="form-buttons">
 
                         <button type="submit">
                             Đăng ký
                         </button>
 
-                        <button type="reset" class="reset-button">
+                        <button
+                            type="reset"
+                            class="reset-button"
+                        >
                             Làm lại
                         </button>
 
@@ -420,11 +408,8 @@
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
-
-        <p>
-            Sinh viên: Vũ Việt Nhật
-        </p>
 
         <p>
             Bài tập thực hành HTML và CSS
@@ -433,4 +418,5 @@
     </footer>
 
 </body>
+
 </html>
