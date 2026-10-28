@@ -1,4 +1,3 @@
-
 /* =========================
    1. CÀI ĐẶT CHUNG
 ========================= */
@@ -14,23 +13,38 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+
     color: #333333;
     background-color: #f2f6fa;
+
     line-height: 1.6;
 }
+
+
+/* =========================
+   2. HEADER
+========================= */
 
 header {
     padding: 30px 15px;
     text-align: center;
-    background: linear-gradient(135deg, #d9eaf7, #a8c9e8);
+
+    background: linear-gradient(
+        135deg,
+        #d9eaf7,
+        #a8c9e8
+    );
 }
 
 header h1 {
     margin: 0;
+
     font-size: 30px;
     font-weight: bold;
+
     letter-spacing: 1px;
 }
 
@@ -41,24 +55,32 @@ header p {
 
 
 /* =========================
-   2. THANH ĐIỀU HƯỚNG
+   3. NAVIGATION
 ========================= */
 
 nav {
     display: flex;
+
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 15px;
+
     padding: 15px;
+
     background-color: #17365d;
 }
 
 nav a {
+    padding: 8px 15px;
+
     color: white;
     text-decoration: none;
+
     font-weight: bold;
-    padding: 8px 15px;
+
     border-radius: 5px;
+
     transition: background-color 0.3s;
 }
 
@@ -69,40 +91,51 @@ nav a:hover {
 
 
 /* =========================
-   3. KHU VỰC CHÍNH
+   4. MAIN
 ========================= */
 
 main {
     width: 95%;
     max-width: 1100px;
+
     margin: 25px auto;
 }
 
 .card {
     position: relative;
+
     margin-bottom: 30px;
     padding: 25px;
+
     background-color: white;
+
     border: 1px solid #d5dce5;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
     margin-top: 10px;
     margin-bottom: 20px;
+
     color: #17365d;
+
     text-align: center;
+
     font-size: 24px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
 
 /* =========================
-   4. FORM THÔNG TIN
+   5. FORM INPUT
 ========================= */
 
 .form-group {
@@ -111,7 +144,9 @@ h1, h2, h3 {
 
 .form-group > label {
     display: block;
+
     margin-bottom: 7px;
+
     font-weight: bold;
 }
 
@@ -122,13 +157,20 @@ input[type="number"],
 select,
 textarea {
     width: 100%;
+
     padding: 10px 12px;
+
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+
     border: 1px solid #b8c4d1;
     border-radius: 6px;
-    background-color: #ffffff;
-    transition: border-color 0.3s, box-shadow 0.3s;
+
+    background-color: white;
+
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
 }
 
 textarea {
@@ -139,9 +181,61 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: none;
+
     border-color: #2563a6;
-    box-shadow: 0 0 5px rgba(37, 99, 166, 0.3);
+
+    box-shadow:
+        0 0 5px rgba(37, 99, 166, 0.3);
 }
+
+
+/* =========================
+   6. AVATAR
+========================= */
+
+.avatar-container {
+    text-align: center;
+
+    margin: 20px 0;
+}
+
+#avatar {
+    display: block;
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid #17365d;
+
+    margin: 0 auto 15px;
+}
+
+.avatar-button {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    color: white;
+    background-color: #17365d;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.avatar-button:hover {
+    background-color: #426b99;
+}
+
+
+/* =========================
+   7. PROFILE
+========================= */
 
 .profile p {
     line-height: 1.8;
@@ -159,25 +253,32 @@ textarea:focus {
 
 
 /* =========================
-   5. SỞ THÍCH
+   8. HOBBIES
 ========================= */
 
 .hobbies,
 .choices {
     display: flex;
+
     flex-wrap: wrap;
     align-items: center;
+
     gap: 12px 20px;
 }
 
 .hobbies label,
 .choices label {
     display: inline-flex;
+
     align-items: center;
     gap: 7px;
+
     padding: 7px 10px;
+
     border-radius: 5px;
+
     cursor: pointer;
+
     transition: background-color 0.3s;
 }
 
@@ -189,49 +290,62 @@ input[type="checkbox"],
 input[type="radio"] {
     width: auto;
     margin: 0;
+
     accent-color: #2563a6;
 }
 
 
 /* =========================
-   6. BẢNG ĐIỂM
+   9. SCORE TABLE
 ========================= */
 
 .score-container {
     position: relative;
+
     padding-top: 45px;
 }
 
 .score-title {
     position: absolute;
+
     top: 10px;
     right: 20px;
+
     color: #17365d;
+
     font-size: 14px;
     font-weight: bold;
+
     letter-spacing: 1px;
 }
 
 #score-table {
     width: 100%;
     max-width: 100%;
+
     margin: 0 auto;
+
     border-collapse: collapse;
     table-layout: fixed;
+
     background-color: white;
 }
 
 #score-table th,
 #score-table td {
     padding: 10px 6px;
+
     border: 1px solid #cbd5e1;
+
     text-align: center;
+
     overflow-wrap: anywhere;
 }
 
 #score-table th {
-    background-color: #17365d;
     color: white;
+    background-color: #17365d;
+
     font-weight: bold;
 }
 
@@ -240,12 +354,15 @@ input[type="radio"] {
 }
 
 #score-table tbody tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 #score-table tbody tr:hover {
     background-color: #e1efff;
 }
+
+
+/* Kích thước các cột */
 
 #score-table th:first-child,
 #score-table td:first-child {
@@ -267,24 +384,37 @@ input[type="radio"] {
     width: 29%;
 }
 
+
+/* Ô nhập trong bảng */
+
 #score-table input {
     width: 100%;
     min-width: 0;
+
     padding: 8px 4px;
+
     font-size: 14px;
     text-align: center;
+
     border: 1px solid #cbd5e1;
     border-radius: 5px;
 }
 
 #score-table input:focus {
     border-color: #2563a6;
+
     outline: none;
-    box-shadow: 0 0 4px rgba(37, 99, 166, 0.25);
+
+    box-shadow:
+        0 0 4px rgba(37, 99, 166, 0.25);
 }
+
+
+/* Điểm trung bình */
 
 #score-table tfoot {
     background-color: #d9eaf7;
+
     font-weight: bold;
 }
 
@@ -299,32 +429,42 @@ input[type="radio"] {
 
 #score-message {
     color: #b42318;
+
     font-weight: bold;
     text-align: center;
 }
 
 
 /* =========================
-   7. FORM ĐĂNG KÝ
+   10. REGISTRATION
 ========================= */
 
 .registration-container {
     position: relative;
+
     padding-top: 50px;
 }
 
 .registration-title {
     position: absolute;
+
     top: 10px;
     right: 20px;
+
     color: #17365d;
+
     font-size: 14px;
     font-weight: bold;
+
     letter-spacing: 1px;
 }
 
+
+/* Flexbox */
+
 .form-row {
     display: flex;
+
     gap: 20px;
 }
 
@@ -333,28 +473,42 @@ input[type="radio"] {
     min-width: 0;
 }
 
+
+/* Buttons */
+
 .button-group {
     display: flex;
+
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 15px;
+
     margin-top: 25px;
 }
 
 button {
     padding: 11px 25px;
+
     color: white;
     background-color: #17365d;
+
     border: none;
     border-radius: 6px;
+
     font-size: 15px;
     font-weight: bold;
+
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
 }
 
 button:hover {
     background-color: #2d5b8d;
+
     transform: translateY(-2px);
 }
 
@@ -373,19 +527,23 @@ button:focus {
 
 #registration-message {
     margin-top: 15px;
+
     color: #167d48;
+
     font-weight: bold;
     text-align: center;
 }
 
 
 /* =========================
-   8. FOOTER
+   11. FOOTER
 ========================= */
 
 footer {
     padding: 20px;
+
     text-align: center;
+
     color: white;
     background-color: #17365d;
 }
@@ -396,7 +554,7 @@ footer p {
 
 
 /* =========================
-   9. RESPONSIVE
+   12. RESPONSIVE
 ========================= */
 
 @media (max-width: 650px) {
@@ -449,4 +607,5 @@ footer p {
         padding: 7px 9px;
         font-size: 13px;
     }
+
 }
