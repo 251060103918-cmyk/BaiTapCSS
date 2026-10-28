@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Thông tin cá nhân - Vũ Việt Nhật</title>
+    <title>Bài thực hành CSS - Vũ Việt Nhật</title>
 
     <!-- Internal CSS -->
     <style>
@@ -14,59 +15,13 @@
             color: #17365d;
         }
 
-        h2 {
-            font-size: 24px;
-        }
-
-        .profile {
-            background-color: #f0f8ff;
-            padding: 25px;
-            border-radius: 15px;
-            max-width: 500px;
-            margin: 20px auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
         .profile p {
             font-size: 18px;
             line-height: 1.8;
-            letter-spacing: 0.5px;
         }
 
-        #avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 20px auto;
-            border: 4px solid #3498db;
-        }
-
-        ul {
-            list-style-type: square;
-            padding-left: 30px;
-        }
-
-        li {
-            padding: 10px;
-            margin: 8px 0;
-            background-color: #ffffff;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        li:hover {
+        .profile li:hover {
             background-color: #b3d9ff;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0066cc;
-        }
-
-        a:hover {
-            color: red;
         }
     </style>
 
@@ -76,29 +31,51 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1 style="color: darkblue;">
-            Thông tin cá nhân
+            BÀI THỰC HÀNH CSS
         </h1>
+
+        <p class="subtitle">
+            Thông tin cá nhân - Bảng điểm - Đăng ký sinh viên
+        </p>
     </header>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#profile">Bài 1: Cá nhân</a>
+        <a href="#grades">Bài 2: Bảng điểm</a>
+        <a href="#register">Bài 3: Đăng ký</a>
+    </nav>
 
     <main>
 
-        <section class="profile">
+        <!-- ================= BAI 1 ================= -->
 
-            <h2>Hồ sơ cá nhân</h2>
+        <section id="profile" class="profile">
+
+            <h2>BÀI 1: THÔNG TIN CÁ NHÂN</h2>
 
             <img
                 id="avatar"
                 src="images/3.jpg"
-                alt="Ảnh đại diện của Vũ Việt Nhật"
+                alt="Ảnh đại diện Vũ Việt Nhật"
             >
 
-            <p><strong>Họ tên:</strong> Vũ Việt Nhật</p>
+            <p>
+                <strong>Họ tên:</strong>
+                Vũ Việt Nhật
+            </p>
 
-            <p><strong>Năm sinh:</strong> 07/02/2007</p>
+            <p>
+                <strong>Năm sinh:</strong>
+                07/02/2007
+            </p>
 
-            <p><strong>Sở thích:</strong></p>
+            <p>
+                <strong>Sở thích:</strong>
+            </p>
 
             <ul>
                 <li>Cầu lông</li>
@@ -113,11 +90,282 @@
 
         </section>
 
+
+        <!-- ================= BAI 2 ================= -->
+
+        <section id="grades" class="grade-container">
+
+            <span class="grade-label">
+                BẢNG ĐIỂM
+            </span>
+
+            <h2>BÀI 2: BẢNG ĐIỂM SINH VIÊN</h2>
+
+            <table class="grade-table">
+
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên học phần</th>
+                        <th>Điểm</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Kỹ năng giao tiếp và làm việc nhóm</td>
+                        <td>8,1</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Nhập môn Khoa học dữ liệu và trí tuệ nhân tạo</td>
+                        <td>7,6</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Triết học Mác - Lê nin</td>
+                        <td>7,0</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Phương pháp nghiên cứu khoa học trong kinh tế</td>
+                        <td>5,7</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Marketing căn bản</td>
+                        <td>6,0</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr class="average">
+                        <td colspan="2">
+                            Điểm trung bình
+                        </td>
+
+                        <td>6,88</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= BAI 3 ================= -->
+
+        <section id="register" class="form-container">
+
+            <span class="form-label">
+                ĐĂNG KÝ MỚI
+            </span>
+
+            <h2>BÀI 3: FORM ĐĂNG KÝ SINH VIÊN</h2>
+
+            <form action="#" method="post">
+
+                <!-- Họ tên và Email -->
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Họ và tên:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Nhập họ và tên"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Nhập email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ngày sinh -->
+                <div class="form-group">
+
+                    <label for="birthday">
+                        Ngày sinh:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="birthday"
+                        name="birthday"
+                    >
+
+                </div>
+
+
+                <!-- Giới tính -->
+                <div class="form-group">
+
+                    <label>Giới tính:</label>
+
+                    <div class="choice-row">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="nam"
+                            >
+                            Nam
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="nu"
+                            >
+                            Nữ
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sở thích -->
+                <div class="form-group">
+
+                    <label>Sở thích:</label>
+
+                    <div class="choice-row">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="hobby"
+                                value="badminton"
+                            >
+                            Cầu lông
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="hobby"
+                                value="gaming"
+                            >
+                            Chơi Game
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Ngành học -->
+                <div class="form-group">
+
+                    <label for="major">
+                        Ngành học:
+                    </label>
+
+                    <select id="major" name="major">
+
+                        <option value="">
+                            -- Chọn ngành học --
+                        </option>
+
+                        <option value="cntt">
+                            Công nghệ thông tin
+                        </option>
+
+                        <option value="marketing">
+                            Marketing
+                        </option>
+
+                        <option value="kinhte">
+                            Kinh tế
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Ghi chú -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Ghi chú:
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Nhập ghi chú"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="button-row">
+
+                    <button type="submit">
+                        Đăng ký
+                    </button>
+
+                    <button type="reset" class="reset-button">
+                        Làm lại
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 - Vũ Việt Nhật</p>
+
+        <p>
+            © 2026 - Vũ Việt Nhật
+        </p>
+
+        <p>
+            Bài thực hành HTML và CSS
+        </p>
+
     </footer>
 
 </body>
+
 </html>
