@@ -1,7 +1,7 @@
 
-/* ===============================
+/* =====================================
    CSS CHUNG
-================================ */
+===================================== */
 
 * {
     box-sizing: border-box;
@@ -9,6 +9,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -20,13 +21,14 @@ body {
     padding: 0;
 
     background-color: #f0f8ff;
+
     color: #333333;
 }
 
 
-/* ===============================
+/* =====================================
    HEADER
-================================ */
+===================================== */
 
 header {
     background-image: linear-gradient(
@@ -36,63 +38,73 @@ header {
     );
 
     padding: 30px 15px;
+
     text-align: center;
 }
 
 header h1 {
     font-size: 2rem;
+
     font-weight: bold;
+
     margin: 0;
 }
 
 .subtitle {
     font-size: 1rem;
+
     color: rgb(60, 80, 100);
 }
 
 
-/* ===============================
+/* =====================================
    TIÊU ĐỀ
-================================ */
+===================================== */
 
 h1,
 h2 {
     text-align: center;
+
     color: #17365d;
 }
 
 h2 {
     font-size: 1.5rem;
+
     margin-bottom: 20px;
 }
 
 
-/* ===============================
+/* =====================================
    MAIN
-================================ */
+===================================== */
 
 main {
     width: 95%;
+
     max-width: 1100px;
 
     margin: 30px auto;
 }
 
 
-/* ===============================
+/* =====================================
    BÀI 1: PROFILE CARD
-================================ */
+===================================== */
 
 .profile {
     width: 100%;
+
     max-width: 700px;
 
     margin: 0 auto 40px auto;
+
     padding: 30px;
 
     background-color: white;
 
     border: 2px solid #b3d9ff;
+
     border-radius: 20px;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -104,12 +116,15 @@ main {
 /* ID Selector */
 
 #avatar {
+    display: block;
+
     width: 180px;
     height: 180px;
 
     object-fit: cover;
 
     border-radius: 50%;
+
     border: 5px solid #b3d9ff;
 
     margin: 15px auto;
@@ -120,6 +135,7 @@ main {
 
 p {
     font-size: 1rem;
+
     line-height: 1.8;
 }
 
@@ -128,15 +144,8 @@ p {
 
 .profile p {
     text-align: left;
+
     margin: 10px 0;
-}
-
-
-/* Group Selector */
-
-h1,
-h2 {
-    letter-spacing: 1px;
 }
 
 
@@ -152,10 +161,11 @@ h2 {
     max-width: 450px;
 
     margin: 20px auto;
+
+    text-align: left;
 }
 
 .profile-info label {
-    text-align: left;
     font-weight: bold;
 }
 
@@ -164,7 +174,10 @@ h2 {
 
     padding: 12px;
 
+    font-size: 1rem;
+
     border: 1px solid #cccccc;
+
     border-radius: 8px;
 }
 
@@ -207,9 +220,17 @@ h2 {
     transition: background-color 0.3s;
 }
 
+
+/* Hover sở thích */
+
 .hobbies label:hover {
     background-color: #b3d9ff;
+
+    color: #17365d;
 }
+
+
+/* Checkbox */
 
 .hobbies input[type="checkbox"] {
     width: 18px;
@@ -230,7 +251,7 @@ a {
 }
 
 
-/* Link Hover */
+/* Pseudo-class */
 
 a:hover {
     color: #ff6600;
@@ -239,14 +260,15 @@ a:hover {
 }
 
 
-/* ===============================
+/* =====================================
    BÀI 2: BẢNG ĐIỂM
-================================ */
+===================================== */
 
 .score-section {
     width: 100%;
 
     margin: 40px auto;
+
     padding: 30px;
 
     background-color: white;
@@ -263,6 +285,7 @@ a:hover {
     position: relative;
 
     width: 100%;
+
     max-width: 900px;
 
     margin: 40px auto 30px auto;
@@ -270,6 +293,7 @@ a:hover {
     padding: 35px 15px 15px;
 
     border: 2px solid #b3d9ff;
+
     border-radius: 12px;
 
     background-color: white;
@@ -282,14 +306,17 @@ a:hover {
     position: absolute;
 
     top: -18px;
+
     right: 20px;
 
     padding: 5px 20px;
 
     background-color: #17365d;
+
     color: white;
 
     font-size: 0.9rem;
+
     font-weight: bold;
 
     border-radius: 8px;
@@ -300,6 +327,7 @@ a:hover {
 
 table {
     width: 100%;
+
     max-width: 850px;
 
     margin: auto;
@@ -326,16 +354,27 @@ td {
 
 thead {
     background-color: #17365d;
+
     color: white;
 }
 
 
-/* Center STT and Score */
+/* Center STT */
 
 th:first-child,
-td:first-child,
+td:first-child {
+    width: 60px;
+
+    text-align: center;
+}
+
+
+/* Center Điểm */
+
 th:last-child,
 td:last-child {
+    width: 120px;
+
     text-align: center;
 }
 
@@ -343,14 +382,19 @@ td:last-child {
 /* Input trong bảng */
 
 td input {
+    display: block;
+
     width: 100%;
+
+    min-width: 0;
 
     padding: 8px;
 
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-
     font-size: 0.9rem;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 5px;
 }
 
 
@@ -378,6 +422,7 @@ tfoot {
     background-color: #d9ead3;
 
     font-weight: bold;
+
     color: #17365d;
 }
 
@@ -386,14 +431,15 @@ tfoot td {
 }
 
 
-/* ===============================
+/* =====================================
    BÀI 3: FORM ĐĂNG KÝ
-================================ */
+===================================== */
 
 .register-section {
     width: 100%;
 
     margin: 40px auto;
+
     padding: 30px;
 
     background-color: white;
@@ -410,6 +456,7 @@ tfoot td {
     position: relative;
 
     width: 100%;
+
     max-width: 700px;
 
     margin: 40px auto 20px auto;
@@ -419,24 +466,28 @@ tfoot td {
     background-color: #f8fbff;
 
     border: 2px solid #b3d9ff;
+
     border-radius: 15px;
 }
 
 
-/* Form Label */
+/* Position Absolute */
 
 .form-label {
     position: absolute;
 
     top: -18px;
+
     right: 20px;
 
     padding: 5px 15px;
 
     background-color: #17365d;
+
     color: white;
 
     font-weight: bold;
+
     font-size: 0.9rem;
 
     border-radius: 8px;
@@ -470,11 +521,18 @@ form {
 
     flex-direction: column;
 
-    flex: 1;
-
-    min-width: 0;
+    width: 100%;
 
     margin-bottom: 20px;
+}
+
+
+/* Họ tên và Email */
+
+.form-row .form-group {
+    flex: 1 1 250px;
+
+    min-width: 0;
 }
 
 
@@ -484,6 +542,7 @@ form {
     margin-bottom: 8px;
 
     font-weight: bold;
+
     color: #17365d;
 }
 
@@ -500,9 +559,11 @@ textarea {
     padding: 12px;
 
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 1rem;
 
     border: 1px solid #cccccc;
+
     border-radius: 8px;
 
     background-color: white;
@@ -532,6 +593,8 @@ textarea:focus {
     flex-direction: row;
 
     flex-wrap: wrap;
+
+    align-items: center;
 
     gap: 15px;
 }
@@ -570,6 +633,7 @@ button {
     padding: 12px 30px;
 
     font-size: 1rem;
+
     font-weight: bold;
 
     color: white;
@@ -577,6 +641,7 @@ button {
     background-color: #0066cc;
 
     border: none;
+
     border-radius: 8px;
 
     cursor: pointer;
@@ -603,9 +668,9 @@ button:hover {
 }
 
 
-/* ===============================
+/* =====================================
    FOOTER
-================================ */
+===================================== */
 
 footer {
     background-color: #17365d;
@@ -624,9 +689,9 @@ footer p {
 }
 
 
-/* ===============================
+/* =====================================
    RESPONSIVE
-================================ */
+===================================== */
 
 @media screen and (max-width: 600px) {
 
@@ -642,11 +707,12 @@ footer p {
 
     .form-row {
         flex-direction: column;
+
         gap: 0;
     }
 
-    .form-group {
-        width: 100%;
+    .form-row .form-group {
+        flex: 1 1 auto;
     }
 
     table {
@@ -658,8 +724,17 @@ footer p {
         padding: 8px 5px;
     }
 
+    td input {
+        font-size: 0.75rem;
+
+        padding: 5px;
+    }
+
     .inline-options {
         flex-direction: column;
+
+        align-items: flex-start;
+
         gap: 10px;
     }
 
