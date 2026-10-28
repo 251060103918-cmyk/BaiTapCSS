@@ -1,0 +1,91 @@
+
+/* Element Selector */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    background-color: #e6f2ff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Group Selector */
+h1, h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Class Selector */
+.profile {
+    width: 80%;
+    max-width: 500px;
+    padding: 25px;
+    margin: 30px auto;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Descendant Selector */
+.profile p {
+    color: rgb(40, 40, 40);
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+/* ID Selector */
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+/* List */
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+}
+
+/* Pseudo-class */
+li:hover {
+    background-color: #b3d9ff;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+/* Header background */
+header {
+    background-image: linear-gradient(
+        to right,
+        #3498db,
+        #b3d9ff
+    );
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #555555;
+    padding: 15px;
+}
