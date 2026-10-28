@@ -1,6 +1,4 @@
-/* =========================
-   1. CÀI ĐẶT CHUNG
-========================= */
+/* ================= GENERAL ================= */
 
 * {
     box-sizing: border-box;
@@ -12,186 +10,156 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
 
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 16px;
 
-    color: #333333;
-    background-color: #f2f6fa;
-
     line-height: 1.6;
+
+    background-color: #f1f5f9;
+
+    color: #222;
 }
 
 
-/* =========================
-   2. HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header {
-    padding: 30px 15px;
-    text-align: center;
-
     background: linear-gradient(
         135deg,
-        #d9eaf7,
-        #a8c9e8
+        #17365d,
+        #426b99
     );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 15px;
 }
 
 header h1 {
     margin: 0;
 
-    font-size: 30px;
-    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
 
-    letter-spacing: 1px;
+    font-size: 30px;
 }
 
 header p {
-    margin-bottom: 0;
-    font-style: italic;
+    margin: 8px 0 0;
 }
 
 
-/* =========================
-   3. NAVIGATION
-========================= */
+/* ================= NAVIGATION ================= */
 
 nav {
     display: flex;
 
     justify-content: center;
+
     flex-wrap: wrap;
 
-    gap: 15px;
+    gap: 10px;
+
+    background-color: #e0e7ef;
 
     padding: 15px;
-
-    background-color: #17365d;
 }
 
 nav a {
-    padding: 8px 15px;
+    display: inline-block;
 
-    color: white;
+    color: #17365d;
+
     text-decoration: none;
 
     font-weight: bold;
 
-    border-radius: 5px;
+    padding: 10px 22px;
 
-    transition: background-color 0.3s;
+    border-radius: 6px;
+
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 nav a:hover {
-    background-color: #426b99;
-    text-decoration: underline;
+    background-color: #17365d;
+
+    color: white;
 }
 
 
-/* =========================
-   4. MAIN
-========================= */
+/* ================= MAIN ================= */
 
 main {
-    width: 95%;
+    width: 90%;
+
     max-width: 1100px;
 
-    margin: 25px auto;
+    margin: 30px auto;
 }
 
+
+/* ================= CARD ================= */
+
 .card {
-    position: relative;
-
-    margin-bottom: 30px;
-    padding: 25px;
-
     background-color: white;
 
-    border: 1px solid #d5dce5;
+    margin-bottom: 30px;
+
+    padding: 25px;
+
+    border: 1px solid #d8e1eb;
+
     border-radius: 12px;
 
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-
+.card h2 {
     color: #17365d;
 
     text-align: center;
 
-    font-size: 24px;
+    margin-top: 0;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #d9eaf7;
 }
 
-h1,
-h2,
-h3 {
-    font-family: Georgia, "Times New Roman", serif;
+.card h3 {
+    color: #17365d;
 }
 
-
-/* =========================
-   5. FORM INPUT
-========================= */
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group > label {
-    display: block;
-
-    margin-bottom: 7px;
-
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;
-
-    padding: 10px 12px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-
-    border: 1px solid #b8c4d1;
-    border-radius: 6px;
-
-    background-color: white;
-
-    transition:
-        border-color 0.3s,
-        box-shadow 0.3s;
-}
-
-textarea {
-    resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-
-    border-color: #2563a6;
-
-    box-shadow:
-        0 0 5px rgba(37, 99, 166, 0.3);
+.description {
+    color: #555;
 }
 
 
-/* =========================
-   6. AVATAR
-========================= */
+/* ================= PROFILE ================= */
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin: 25px 0;
+}
+
+
+/* ================= AVATAR ================= */
 
 .avatar-container {
     text-align: center;
@@ -203,14 +171,50 @@ textarea:focus {
     display: block;
 
     width: 150px;
+
     height: 150px;
 
     object-fit: cover;
 
     border-radius: 50%;
-    border: 3px solid #17365d;
+
+    border: 4px solid #17365d;
 
     margin: 0 auto 15px;
+}
+
+#avatar[hidden] {
+    display: none;
+}
+
+#avatar-placeholder {
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 15px;
+
+    border: 3px dashed #17365d;
+
+    border-radius: 50%;
+
+    background-color: #e5f1fc;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    padding: 10px;
+}
+
+#avatar-placeholder[hidden] {
+    display: none;
 }
 
 .avatar-button {
@@ -219,248 +223,271 @@ textarea:focus {
     padding: 10px 18px;
 
     color: white;
+
     background-color: #17365d;
 
     border-radius: 6px;
 
     cursor: pointer;
 
-    transition: background-color 0.3s;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 
 .avatar-button:hover {
     background-color: #426b99;
+
+    transform: translateY(-2px);
 }
 
 
-/* =========================
-   7. PROFILE
-========================= */
+/* ================= PROFILE INFORMATION ================= */
 
-.profile p {
-    line-height: 1.8;
+.profile-info {
+    min-width: 250px;
 }
 
-.profile a {
-    color: #1769aa;
-    text-decoration: underline;
+.profile-info h3 {
+    margin-top: 0;
 }
 
-.profile a:hover {
-    color: #0b3e70;
-    text-decoration: none;
+.profile-info p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #e5e7eb;
 }
 
 
-/* =========================
-   8. HOBBIES
-========================= */
+/* ================= PERSONAL INPUT ================= */
 
-.hobbies,
-.choices {
+.personal-input {
+    background-color: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    margin-top: 20px;
+}
+
+.input-group {
     display: flex;
 
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
 
-    gap: 12px 20px;
+    margin-bottom: 15px;
 }
 
-.hobbies label,
-.choices label {
-    display: inline-flex;
+.input-group label {
+    font-weight: bold;
 
-    align-items: center;
-    gap: 7px;
+    margin-bottom: 6px;
+}
 
-    padding: 7px 10px;
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #b8c5d3;
 
     border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+
+    border-color: #17365d;
+
+    box-shadow:
+        0 0 5px rgba(23, 54, 93, 0.3);
+}
+
+
+/* ================= HOBBIES ================= */
+
+.hobbies {
+    margin-top: 25px;
+}
+
+.hobby-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.hobby-list li {
+    background-color: #e5f1fc;
+
+    padding: 12px;
+
+    border-left: 4px solid #17365d;
+
+    border-radius: 5px;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
+}
+
+.hobby-list li:hover {
+    background-color: #c9e1f7;
+
+    transform: translateX(4px);
+}
+
+
+/* ================= BUTTONS ================= */
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 11px 20px;
 
     cursor: pointer;
 
-    transition: background-color 0.3s;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 
-.hobbies label:hover {
-    background-color: #e5f1fc;
+button:hover {
+    transform: translateY(-2px);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    width: auto;
-    margin: 0;
+#update-profile {
+    background-color: #17365d;
 
-    accent-color: #2563a6;
+    color: white;
+}
+
+#update-profile:hover {
+    background-color: #426b99;
 }
 
 
-/* =========================
-   9. SCORE TABLE
-========================= */
+/* ================= TABLE ================= */
 
-.score-container {
-    position: relative;
+.table-container {
+    width: 100%;
 
-    padding-top: 45px;
+    overflow-x: auto;
+
+    margin: 20px 0;
 }
 
-.score-title {
-    position: absolute;
+table {
+    width: 100%;
 
-    top: 10px;
-    right: 20px;
+    min-width: 500px;
+
+    border-collapse: collapse;
+
+    text-align: center;
+}
+
+thead {
+    background-color: #17365d;
+
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+
+    padding: 12px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eaf2f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: #d5e7f7;
+}
+
+.grade-number,
+.grade-letter {
+    width: 100%;
+
+    max-width: 120px;
+
+    padding: 8px;
+
+    border: 1px solid #b8c5d3;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+.grade-letter {
+    background-color: #f1f5f9;
+}
+
+.grade-number:focus {
+    outline: none;
+
+    border-color: #17365d;
+
+    box-shadow:
+        0 0 4px rgba(23, 54, 93, 0.3);
+}
+
+tfoot {
+    background-color: #d9eaf7;
 
     color: #17365d;
 
-    font-size: 14px;
     font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-#score-table {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 0 auto;
-
-    border-collapse: collapse;
-    table-layout: fixed;
-
-    background-color: white;
-}
-
-#score-table th,
-#score-table td {
-    padding: 10px 6px;
-
-    border: 1px solid #cbd5e1;
-
-    text-align: center;
-
-    overflow-wrap: anywhere;
-}
-
-#score-table th {
-    color: white;
-    background-color: #17365d;
-
-    font-weight: bold;
-}
-
-#score-table tbody tr:nth-child(odd) {
-    background-color: #f1f6fb;
-}
-
-#score-table tbody tr:nth-child(even) {
-    background-color: white;
-}
-
-#score-table tbody tr:hover {
-    background-color: #e1efff;
-}
-
-
-/* Kích thước các cột */
-
-#score-table th:first-child,
-#score-table td:first-child {
-    width: 8%;
-}
-
-#score-table th:nth-child(2),
-#score-table td:nth-child(2) {
-    width: 38%;
-}
-
-#score-table th:nth-child(3),
-#score-table td:nth-child(3) {
-    width: 25%;
-}
-
-#score-table th:nth-child(4),
-#score-table td:nth-child(4) {
-    width: 29%;
-}
-
-
-/* Ô nhập trong bảng */
-
-#score-table input {
-    width: 100%;
-    min-width: 0;
-
-    padding: 8px 4px;
-
-    font-size: 14px;
-    text-align: center;
-
-    border: 1px solid #cbd5e1;
-    border-radius: 5px;
-}
-
-#score-table input:focus {
-    border-color: #2563a6;
-
-    outline: none;
-
-    box-shadow:
-        0 0 4px rgba(37, 99, 166, 0.25);
-}
-
-
-/* Điểm trung bình */
-
-#score-table tfoot {
-    background-color: #d9eaf7;
-
-    font-weight: bold;
-}
-
-#score-table tfoot td {
-    padding: 12px 6px;
 }
 
 #average {
-    color: #17365d;
+    font-weight: bold;
+
     font-size: 18px;
 }
 
-#score-message {
-    color: #b42318;
+#reset-scores {
+    background-color: #64748b;
 
-    font-weight: bold;
-    text-align: center;
+    color: white;
+}
+
+#reset-scores:hover {
+    background-color: #475569;
 }
 
 
-/* =========================
-   10. REGISTRATION
-========================= */
+/* ================= REGISTRATION FORM ================= */
 
-.registration-container {
-    position: relative;
-
-    padding-top: 50px;
+#registration-form {
+    margin-top: 20px;
 }
-
-.registration-title {
-    position: absolute;
-
-    top: 10px;
-    right: 20px;
-
-    color: #17365d;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-/* Flexbox */
 
 .form-row {
     display: flex;
@@ -468,104 +495,163 @@ input[type="radio"] {
     gap: 20px;
 }
 
-.form-row .form-group {
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
     flex: 1;
-    min-width: 0;
+}
+
+.form-group > label {
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #17365d;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #b8c5d3;
+
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #17365d;
+
+    box-shadow:
+        0 0 5px rgba(23, 54, 93, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
 }
 
 
-/* Buttons */
+/* ================= OPTIONS ================= */
 
-.button-group {
+.option-group {
     display: flex;
 
-    justify-content: center;
     flex-wrap: wrap;
 
     gap: 15px;
 
-    margin-top: 25px;
+    margin-top: 8px;
 }
 
-button {
-    padding: 11px 25px;
+.option-group label {
+    display: inline-flex;
 
-    color: white;
-    background-color: #17365d;
+    align-items: center;
 
-    border: none;
-    border-radius: 6px;
-
-    font-size: 15px;
-    font-weight: bold;
+    gap: 7px;
 
     cursor: pointer;
 
-    transition:
-        background-color 0.3s,
-        transform 0.2s;
+    padding: 8px 12px;
+
+    background-color: #f1f5f9;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #2d5b8d;
-
-    transform: translateY(-2px);
+.option-group label:hover {
+    background-color: #d9eaf7;
 }
 
-button:focus {
-    outline: 2px solid #2563a6;
-    outline-offset: 3px;
+.option-group input {
+    cursor: pointer;
+
+    accent-color: #17365d;
+}
+
+
+/* ================= FORM BUTTONS ================= */
+
+.form-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.submit-button {
+    background-color: #17365d;
+
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #426b99;
 }
 
 .reset-button {
-    background-color: #6b7280;
+    background-color: #64748b;
+
+    color: white;
 }
 
 .reset-button:hover {
-    background-color: #4b5563;
-}
-
-#registration-message {
-    margin-top: 15px;
-
-    color: #167d48;
-
-    font-weight: bold;
-    text-align: center;
+    background-color: #475569;
 }
 
 
-/* =========================
-   11. FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer {
-    padding: 20px;
+    background-color: #17365d;
+
+    color: white;
 
     text-align: center;
 
-    color: white;
-    background-color: #17365d;
+    padding: 20px;
+
+    margin-top: 30px;
 }
 
 footer p {
-    margin: 0;
+    margin: 5px;
 }
 
 
-/* =========================
-   12. RESPONSIVE
-========================= */
+/* ================= RESPONSIVE ================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     header h1 {
         font-size: 23px;
     }
 
     main {
-        width: 96%;
-        margin: 15px auto;
+        width: 95%;
     }
 
     .card {
@@ -574,29 +660,22 @@ footer p {
 
     .form-row {
         flex-direction: column;
+
         gap: 0;
     }
 
-    #score-table th,
-    #score-table td {
-        padding: 7px 3px;
-        font-size: 12px;
+    .profile {
+        flex-direction: column;
+
+        gap: 15px;
     }
 
-    #score-table input {
-        padding: 7px 2px;
-        font-size: 12px;
+    .profile-info {
+        width: 100%;
     }
 
-    .score-title,
-    .registration-title {
-        right: 12px;
-        font-size: 12px;
-    }
-
-    .hobbies,
-    .choices {
-        gap: 5px;
+    .hobby-list {
+        grid-template-columns: 1fr;
     }
 
     nav {
@@ -604,8 +683,21 @@ footer p {
     }
 
     nav a {
-        padding: 7px 9px;
-        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .option-group {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
     }
 
 }
