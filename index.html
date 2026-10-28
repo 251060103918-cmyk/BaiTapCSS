@@ -1,13 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bài tập thực hành HTML và CSS</title>
+
     <link rel="stylesheet" href="style.css">
 
     <style>
+        h1, h2, h3 {
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
         h2 {
             color: #17365d;
             text-align: center;
@@ -17,24 +22,33 @@
             line-height: 1.8;
         }
 
-        h1, h2, h3 {
-            font-family: Georgia, "Times New Roman", serif;
+        .profile a:hover {
+            color: #b42318;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
-        <h1 style="color: #17365d;">BÀI TẬP THỰC HÀNH HTML & CSS</h1>
+        <h1 style="color: #17365d;">
+            BÀI TẬP THỰC HÀNH HTML & CSS
+        </h1>
+
         <p>Thông tin cá nhân, bảng điểm và đăng ký</p>
     </header>
+
+
+    <!-- NAVIGATION -->
 
     <nav>
         <a href="#profile">Thông tin cá nhân</a>
         <a href="#scores">Bảng điểm</a>
         <a href="#registration">Đăng ký</a>
     </nav>
+
 
     <main>
 
@@ -44,62 +58,143 @@
 
             <h2>BÀI 1: THÔNG TIN CÁ NHÂN</h2>
 
-            <div class="form-group">
-                <label for="profile-name">Họ và tên:</label>
-                <input type="text"
-                       id="profile-name"
-                       name="profile-name"
-                       placeholder="Nhập họ và tên">
+            <!-- ẢNH ĐẠI DIỆN -->
+
+            <div class="avatar-container">
+
+                <img
+                    src="https://placehold.co/150x150?text=Avatar"
+                    id="avatar"
+                    alt="Ảnh đại diện"
+                >
+
+                <label for="avatar-input" class="avatar-button">
+                    Chọn ảnh đại diện
+                </label>
+
+                <input
+                    type="file"
+                    id="avatar-input"
+                    accept="image/*"
+                    hidden
+                >
+
             </div>
 
-            <div class="form-group">
-                <label for="profile-birth">Ngày tháng năm sinh:</label>
-                <input type="date"
-                       id="profile-birth"
-                       name="profile-birth">
-            </div>
+
+            <!-- HỌ VÀ TÊN -->
 
             <div class="form-group">
-                <label for="profile-email">Email:</label>
-                <input type="email"
-                       id="profile-email"
-                       name="profile-email"
-                       placeholder="Nhập email">
+
+                <label for="profile-name">
+                    Họ và tên:
+                </label>
+
+                <input
+                    type="text"
+                    id="profile-name"
+                    name="profile-name"
+                    placeholder="Nhập họ và tên"
+                >
+
             </div>
 
+
+            <!-- NGÀY THÁNG NĂM SINH -->
+
             <div class="form-group">
+
+                <label for="profile-birth">
+                    Ngày tháng năm sinh:
+                </label>
+
+                <input
+                    type="date"
+                    id="profile-birth"
+                    name="profile-birth"
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="profile-email">
+                    Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="profile-email"
+                    name="profile-email"
+                    placeholder="Nhập email"
+                >
+
+            </div>
+
+
+            <!-- SỞ THÍCH -->
+
+            <div class="form-group">
+
                 <label>Sở thích:</label>
 
                 <div class="hobbies">
+
                     <label>
-                        <input type="checkbox" name="hobby" value="badminton">
+                        <input
+                            type="checkbox"
+                            name="hobby"
+                            value="badminton"
+                        >
                         Cầu lông
                     </label>
 
                     <label>
-                        <input type="checkbox" name="hobby" value="gaming">
+                        <input
+                            type="checkbox"
+                            name="hobby"
+                            value="gaming"
+                        >
                         Chơi game
                     </label>
 
                     <label>
-                        <input type="checkbox" name="hobby" value="music">
+                        <input
+                            type="checkbox"
+                            name="hobby"
+                            value="music"
+                        >
                         Nghe nhạc
                     </label>
 
                     <label>
-                        <input type="checkbox" name="hobby" value="reading">
+                        <input
+                            type="checkbox"
+                            name="hobby"
+                            value="reading"
+                        >
                         Đọc sách
                     </label>
+
                 </div>
+
             </div>
+
 
             <p>
                 Đây là trang thực hành HTML và CSS.
-                Em có thể nhập thông tin và chọn sở thích.
+                Em có thể nhập thông tin cá nhân và chọn sở thích.
             </p>
 
             <p>
-                <a href="https://phenikaa.edu.vn/" target="_blank">
+                <a
+                    href="https://phenikaa.edu.vn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Trang web Phenikaa
                 </a>
             </p>
@@ -107,141 +202,225 @@
         </section>
 
 
+
         <!-- BÀI 2: BẢNG ĐIỂM -->
 
         <section id="scores" class="score-container card">
 
-            <div class="score-title">BẢNG ĐIỂM</div>
+            <div class="score-title">
+                BẢNG ĐIỂM
+            </div>
 
             <h2>BÀI 2: BẢNG ĐIỂM</h2>
+
 
             <table id="score-table">
 
                 <thead>
+
                     <tr>
                         <th>STT</th>
                         <th>Môn học</th>
                         <th>Điểm chữ</th>
                         <th>Điểm số</th>
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
                     <tr>
+
                         <td>1</td>
+
                         <td>
-                            <input type="text"
-                                   class="subject"
-                                   placeholder="Nhập môn học">
+                            <input
+                                type="text"
+                                class="subject"
+                                placeholder="Nhập môn học"
+                                aria-label="Môn học 1"
+                            >
                         </td>
+
                         <td>
-                            <input type="text"
-                                   class="letter-grade"
-                                   placeholder="Điểm chữ">
+                            <input
+                                type="text"
+                                class="letter-grade"
+                                placeholder="Điểm chữ"
+                                aria-label="Điểm chữ môn 1"
+                            >
                         </td>
+
                         <td>
-                            <input type="number"
-                                   class="score"
-                                   min="0"
-                                   max="10"
-                                   step="0.1"
-                                   placeholder="0 - 10">
+                            <input
+                                type="number"
+                                class="score"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="0 - 10"
+                                aria-label="Điểm số môn 1"
+                            >
                         </td>
+
                     </tr>
 
+
                     <tr>
+
                         <td>2</td>
+
                         <td>
-                            <input type="text"
-                                   class="subject"
-                                   placeholder="Nhập môn học">
+                            <input
+                                type="text"
+                                class="subject"
+                                placeholder="Nhập môn học"
+                                aria-label="Môn học 2"
+                            >
                         </td>
+
                         <td>
-                            <input type="text"
-                                   class="letter-grade"
-                                   placeholder="Điểm chữ">
+                            <input
+                                type="text"
+                                class="letter-grade"
+                                placeholder="Điểm chữ"
+                                aria-label="Điểm chữ môn 2"
+                            >
                         </td>
+
                         <td>
-                            <input type="number"
-                                   class="score"
-                                   min="0"
-                                   max="10"
-                                   step="0.1"
-                                   placeholder="0 - 10">
+                            <input
+                                type="number"
+                                class="score"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="0 - 10"
+                                aria-label="Điểm số môn 2"
+                            >
                         </td>
+
                     </tr>
 
+
                     <tr>
+
                         <td>3</td>
+
                         <td>
-                            <input type="text"
-                                   class="subject"
-                                   placeholder="Nhập môn học">
+                            <input
+                                type="text"
+                                class="subject"
+                                placeholder="Nhập môn học"
+                                aria-label="Môn học 3"
+                            >
                         </td>
+
                         <td>
-                            <input type="text"
-                                   class="letter-grade"
-                                   placeholder="Điểm chữ">
+                            <input
+                                type="text"
+                                class="letter-grade"
+                                placeholder="Điểm chữ"
+                                aria-label="Điểm chữ môn 3"
+                            >
                         </td>
+
                         <td>
-                            <input type="number"
-                                   class="score"
-                                   min="0"
-                                   max="10"
-                                   step="0.1"
-                                   placeholder="0 - 10">
+                            <input
+                                type="number"
+                                class="score"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="0 - 10"
+                                aria-label="Điểm số môn 3"
+                            >
                         </td>
+
                     </tr>
 
+
                     <tr>
+
                         <td>4</td>
+
                         <td>
-                            <input type="text"
-                                   class="subject"
-                                   placeholder="Nhập môn học">
+                            <input
+                                type="text"
+                                class="subject"
+                                placeholder="Nhập môn học"
+                                aria-label="Môn học 4"
+                            >
                         </td>
+
                         <td>
-                            <input type="text"
-                                   class="letter-grade"
-                                   placeholder="Điểm chữ">
+                            <input
+                                type="text"
+                                class="letter-grade"
+                                placeholder="Điểm chữ"
+                                aria-label="Điểm chữ môn 4"
+                            >
                         </td>
+
                         <td>
-                            <input type="number"
-                                   class="score"
-                                   min="0"
-                                   max="10"
-                                   step="0.1"
-                                   placeholder="0 - 10">
+                            <input
+                                type="number"
+                                class="score"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="0 - 10"
+                                aria-label="Điểm số môn 4"
+                            >
                         </td>
+
                     </tr>
 
+
                     <tr>
+
                         <td>5</td>
+
                         <td>
-                            <input type="text"
-                                   class="subject"
-                                   placeholder="Nhập môn học">
+                            <input
+                                type="text"
+                                class="subject"
+                                placeholder="Nhập môn học"
+                                aria-label="Môn học 5"
+                            >
                         </td>
+
                         <td>
-                            <input type="text"
-                                   class="letter-grade"
-                                   placeholder="Điểm chữ">
+                            <input
+                                type="text"
+                                class="letter-grade"
+                                placeholder="Điểm chữ"
+                                aria-label="Điểm chữ môn 5"
+                            >
                         </td>
+
                         <td>
-                            <input type="number"
-                                   class="score"
-                                   min="0"
-                                   max="10"
-                                   step="0.1"
-                                   placeholder="0 - 10">
+                            <input
+                                type="number"
+                                class="score"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                placeholder="0 - 10"
+                                aria-label="Điểm số môn 5"
+                            >
                         </td>
+
                     </tr>
 
                 </tbody>
 
+
                 <tfoot>
+
                     <tr>
+
                         <td colspan="3">
                             <strong>Điểm trung bình</strong>
                         </td>
@@ -249,137 +428,230 @@
                         <td>
                             <strong id="average">—</strong>
                         </td>
+
                     </tr>
+
                 </tfoot>
 
             </table>
+
 
             <p id="score-message" aria-live="polite"></p>
 
         </section>
 
 
+
         <!-- BÀI 3: FORM ĐĂNG KÝ -->
 
         <section id="registration" class="registration-container card">
 
-            <div class="registration-title">ĐĂNG KÝ MỚI</div>
+            <div class="registration-title">
+                ĐĂNG KÝ MỚI
+            </div>
 
             <h2>BÀI 3: FORM ĐĂNG KÝ</h2>
 
+
             <form id="registration-form">
+
+                <!-- HỌ TÊN VÀ EMAIL -->
 
                 <div class="form-row">
 
                     <div class="form-group">
-                        <label for="fullname">Họ và tên:</label>
-                        <input type="text"
-                               id="fullname"
-                               name="fullname"
-                               placeholder="Nhập họ và tên"
-                               required>
+
+                        <label for="fullname">
+                            Họ và tên:
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Nhập họ và tên"
+                            required
+                        >
+
                     </div>
+
 
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="Nhập email"
-                               required>
+
+                        <label for="email">
+                            Email:
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Nhập email"
+                            required
+                        >
+
                     </div>
 
                 </div>
 
-                <div class="form-group">
-                    <label for="birth">Ngày tháng năm sinh:</label>
-                    <input type="date"
-                           id="birth"
-                           name="birth">
-                </div>
+
+                <!-- NGÀY SINH -->
 
                 <div class="form-group">
+
+                    <label for="birth">
+                        Ngày tháng năm sinh:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="birth"
+                        name="birth"
+                    >
+
+                </div>
+
+
+                <!-- GIỚI TÍNH -->
+
+                <div class="form-group">
+
                     <label>Giới tính:</label>
 
                     <div class="choices">
 
                         <label>
-                            <input type="radio"
-                                   name="gender"
-                                   value="male">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                            >
                             Nam
                         </label>
 
                         <label>
-                            <input type="radio"
-                                   name="gender"
-                                   value="female">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                            >
                             Nữ
                         </label>
 
                         <label>
-                            <input type="radio"
-                                   name="gender"
-                                   value="other">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="other"
+                            >
                             Khác
                         </label>
 
                     </div>
+
                 </div>
 
+
+                <!-- SỞ THÍCH -->
+
                 <div class="form-group">
+
                     <label>Sở thích:</label>
 
                     <div class="choices">
 
                         <label>
-                            <input type="checkbox"
-                                   name="registration-hobby"
-                                   value="music">
+                            <input
+                                type="checkbox"
+                                name="registration-hobby"
+                                value="music"
+                            >
                             Nghe nhạc
                         </label>
 
                         <label>
-                            <input type="checkbox"
-                                   name="registration-hobby"
-                                   value="sports">
+                            <input
+                                type="checkbox"
+                                name="registration-hobby"
+                                value="sports"
+                            >
                             Thể thao
                         </label>
 
                         <label>
-                            <input type="checkbox"
-                                   name="registration-hobby"
-                                   value="reading">
+                            <input
+                                type="checkbox"
+                                name="registration-hobby"
+                                value="reading"
+                            >
                             Đọc sách
                         </label>
 
                     </div>
+
                 </div>
 
+
+                <!-- NGÀNH HỌC -->
+
                 <div class="form-group">
-                    <label for="major">Ngành học:</label>
+
+                    <label for="major">
+                        Ngành học:
+                    </label>
 
                     <select id="major" name="major">
-                        <option value="">-- Chọn ngành học --</option>
-                        <option value="it">Công nghệ thông tin</option>
-                        <option value="business">Quản trị kinh doanh</option>
-                        <option value="design">Thiết kế</option>
-                        <option value="other">Ngành khác</option>
+
+                        <option value="">
+                            -- Chọn ngành học --
+                        </option>
+
+                        <option value="it">
+                            Công nghệ thông tin
+                        </option>
+
+                        <option value="business">
+                            Quản trị kinh doanh
+                        </option>
+
+                        <option value="design">
+                            Thiết kế
+                        </option>
+
+                        <option value="other">
+                            Ngành khác
+                        </option>
+
                     </select>
+
                 </div>
+
+
+                <!-- GHI CHÚ -->
 
                 <div class="form-group">
-                    <label for="message">Ghi chú:</label>
 
-                    <textarea id="message"
-                              name="message"
-                              rows="4"
-                              placeholder="Nhập ghi chú"></textarea>
+                    <label for="message">
+                        Ghi chú:
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Nhập ghi chú"
+                    ></textarea>
+
                 </div>
+
+
+                <!-- BUTTON -->
 
                 <div class="button-group">
 
-                    <button type="submit">Đăng ký</button>
+                    <button type="submit">
+                        Đăng ký
+                    </button>
 
                     <button type="reset" class="reset-button">
                         Làm lại
@@ -387,7 +659,11 @@
 
                 </div>
 
-                <p id="registration-message" aria-live="polite"></p>
+
+                <p
+                    id="registration-message"
+                    aria-live="polite"
+                ></p>
 
             </form>
 
@@ -395,93 +671,188 @@
 
     </main>
 
+
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>Bài tập thực hành HTML và CSS</p>
+
+        <p>
+            Bài tập thực hành HTML và CSS
+        </p>
+
     </footer>
 
 
-    <!-- JAVASCRIPT: TỰ ĐỘNG TÍNH ĐIỂM TRUNG BÌNH -->
+
+    <!-- JAVASCRIPT -->
 
     <script>
-        const scoreInputs = document.querySelectorAll(".score");
-        const averageDisplay = document.getElementById("average");
-        const scoreMessage = document.getElementById("score-message");
 
-        function calculateAverage() {
+        // =========================
+        // 1. CHỌN ẢNH ĐẠI DIỆN
+        // =========================
 
-            let total = 0;
-            let count = 0;
-            let invalid = false;
+        const avatarInput =
+            document.getElementById("avatar-input");
 
-            scoreInputs.forEach(function(input) {
+        const avatar =
+            document.getElementById("avatar");
 
-                const value = input.value.trim();
+        let currentAvatarURL = null;
 
-                if (value !== "") {
 
-                    const score = Number(value);
+        avatarInput.addEventListener("change", function () {
 
-                    if (
-                        !Number.isFinite(score) ||
-                        score < 0 ||
-                        score > 10
-                    ) {
-                        invalid = true;
-                    } else {
-                        total += score;
-                        count++;
-                    }
+            const file = this.files[0];
 
-                }
-
-            });
-
-            if (invalid) {
-                averageDisplay.textContent = "—";
-                scoreMessage.textContent =
-                    "Vui lòng nhập điểm từ 0 đến 10.";
+            if (!file) {
                 return;
             }
 
-            scoreMessage.textContent = "";
+            if (!file.type.startsWith("image/")) {
 
-            if (count === 0) {
-                averageDisplay.textContent = "—";
-            } else {
-                const average = total / count;
-                averageDisplay.textContent = average.toFixed(2);
+                alert("Vui lòng chọn một tệp hình ảnh.");
+
+                this.value = "";
+
+                return;
             }
 
-        }
+            if (currentAvatarURL !== null) {
+                URL.revokeObjectURL(currentAvatarURL);
+            }
 
-        scoreInputs.forEach(function(input) {
+            currentAvatarURL = URL.createObjectURL(file);
 
-            input.addEventListener("input", calculateAverage);
-
-            input.addEventListener("change", function() {
-
-                if (input.value !== "") {
-
-                    const score = Number(input.value);
-
-                    if (
-                        Number.isFinite(score) &&
-                        score >= 0 &&
-                        score <= 10
-                    ) {
-                        input.value = score;
-                    }
-
-                }
-
-                calculateAverage();
-
-            });
+            avatar.src = currentAvatarURL;
 
         });
 
 
-        // FORM ĐĂNG KÝ
+
+        // =========================
+        // 2. TỰ ĐỘNG TÍNH ĐIỂM
+        // =========================
+
+        const scoreInputs =
+            document.querySelectorAll(".score");
+
+        const averageDisplay =
+            document.getElementById("average");
+
+        const scoreMessage =
+            document.getElementById("score-message");
+
+
+        function calculateAverage() {
+
+            let total = 0;
+
+            let count = 0;
+
+            let invalid = false;
+
+
+            scoreInputs.forEach(function (input) {
+
+                const value = input.value.trim();
+
+
+                // Bỏ qua ô chưa nhập
+
+                if (value === "") {
+                    return;
+                }
+
+
+                const score = Number(value);
+
+
+                // Kiểm tra điểm từ 0 đến 10
+
+                if (
+                    !Number.isFinite(score) ||
+                    score < 0 ||
+                    score > 10
+                ) {
+
+                    invalid = true;
+
+                } else {
+
+                    total += score;
+
+                    count++;
+
+                }
+
+            });
+
+
+            // Nếu có điểm không hợp lệ
+
+            if (invalid) {
+
+                averageDisplay.textContent = "—";
+
+                scoreMessage.textContent =
+                    "Vui lòng nhập điểm từ 0 đến 10.";
+
+                return;
+
+            }
+
+
+            scoreMessage.textContent = "";
+
+
+            // Nếu chưa nhập điểm
+
+            if (count === 0) {
+
+                averageDisplay.textContent = "—";
+
+                return;
+
+            }
+
+
+            // Tính điểm trung bình
+
+            const average = total / count;
+
+
+            // Hiển thị 2 chữ số thập phân
+
+            averageDisplay.textContent =
+                average.toFixed(2);
+
+        }
+
+
+
+        // Tự tính lại khi nhập hoặc thay đổi điểm
+
+        scoreInputs.forEach(function (input) {
+
+            input.addEventListener(
+                "input",
+                calculateAverage
+            );
+
+            input.addEventListener(
+                "change",
+                calculateAverage
+            );
+
+        });
+
+
+
+        // =========================
+        // 3. FORM ĐĂNG KÝ
+        // =========================
 
         const registrationForm =
             document.getElementById("registration-form");
@@ -489,20 +860,28 @@
         const registrationMessage =
             document.getElementById("registration-message");
 
-        registrationForm.addEventListener("submit", function(event) {
 
-            event.preventDefault();
+        registrationForm.addEventListener(
+            "submit",
+            function (event) {
 
-            registrationMessage.textContent =
-                "Đăng ký thành công!";
+                event.preventDefault();
 
-        });
+                registrationMessage.textContent =
+                    "Đăng ký thành công!";
 
-        registrationForm.addEventListener("reset", function() {
+            }
+        );
 
-            registrationMessage.textContent = "";
 
-        });
+        registrationForm.addEventListener(
+            "reset",
+            function () {
+
+                registrationMessage.textContent = "";
+
+            }
+        );
 
     </script>
 
