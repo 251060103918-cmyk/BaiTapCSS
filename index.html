@@ -62,12 +62,30 @@
                 alt="Ảnh đại diện"
             >
 
+            <!-- Thông tin cá nhân -->
             <div class="profile-info">
 
-                <p>
-                    <strong>Năm sinh:</strong>
-                    <span>07/02/2007</span>
-                </p>
+                <label for="profile-name">
+                    Họ và tên
+                </label>
+
+                <input
+                    type="text"
+                    id="profile-name"
+                    name="profile-name"
+                    placeholder="Nhập họ và tên"
+                >
+
+                <label for="profile-birth">
+                    Năm sinh
+                </label>
+
+                <input
+                    type="text"
+                    id="profile-birth"
+                    name="profile-birth"
+                    placeholder="Nhập ngày/tháng/năm"
+                >
 
             </div>
 
@@ -81,12 +99,9 @@
                         type="checkbox"
                         name="hobby"
                         value="caulong"
-                        checked
                     >
                     Cầu lông
                 </label>
-
-                <br><br>
 
                 <label>
                     <input
@@ -97,14 +112,32 @@
                     Chơi Game
                 </label>
 
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobby"
+                        value="music"
+                    >
+                    Âm nhạc
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobby"
+                        value="reading"
+                    >
+                    Đọc sách
+                </label>
+
             </div>
 
             <p>
                 <a
                     href="https://www.phenikaa-uni.edu.vn/"
                     target="_blank"
-                >
-                    Trường Đại học Phenikaa
+            >
+                Trường Đại học Phenikaa
                 </a>
             </p>
 
@@ -137,36 +170,92 @@
 
                         <tr>
                             <td>1</td>
-                            <td>Kỹ năng giao tiếp và làm việc nhóm</td>
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="subject1"
+                                    placeholder="Nhập tên học phần"
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="score1"
+                                    placeholder="Điểm"
+                                >
+                            </td>
                         </tr>
 
                         <tr>
                             <td>2</td>
                             <td>
-                                Nhập môn Khoa học dữ liệu và trí tuệ nhân tạo
+                                <input
+                                    type="text"
+                                    name="subject2"
+                                    placeholder="Nhập tên học phần"
+                                >
                             </td>
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="score2"
+                                    placeholder="Điểm"
+                                >
+                            </td>
                         </tr>
 
                         <tr>
                             <td>3</td>
-                            <td>Triết học Mác - Lê nin</td>
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="subject3"
+                                    placeholder="Nhập tên học phần"
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="score3"
+                                    placeholder="Điểm"
+                                >
+                            </td>
                         </tr>
 
                         <tr>
                             <td>4</td>
                             <td>
-                                Phương pháp nghiên cứu khoa học trong kinh tế
+                                <input
+                                    type="text"
+                                    name="subject4"
+                                    placeholder="Nhập tên học phần"
+                                >
                             </td>
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="score4"
+                                    placeholder="Điểm"
+                                >
+                            </td>
                         </tr>
 
                         <tr>
                             <td>5</td>
-                            <td>Marketing căn bản</td>
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="subject5"
+                                    placeholder="Nhập tên học phần"
+                                >
+                            </td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="score5"
+                                    placeholder="Điểm"
+                                >
+                            </td>
                         </tr>
 
                     </tbody>
@@ -178,7 +267,13 @@
                                 Điểm trung bình
                             </td>
 
-                            <td></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="average"
+                                    placeholder="Điểm TB"
+                                >
+                            </td>
                         </tr>
 
                     </tfoot>
