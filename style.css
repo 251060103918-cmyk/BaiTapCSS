@@ -1,197 +1,266 @@
 
-/* =========================================
+/* ===============================
    CSS CHUNG
-========================================= */
+================================ */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    font-weight: normal;
     font-style: normal;
-    background-color: #e6f2ff;
-    color: #333333;
+
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+
     margin: 0;
-    padding: 20px;
+    padding: 0;
+
+    background-color: #f0f8ff;
+    color: #333333;
 }
 
-h1, h2 {
-    text-align: center;
-    font-weight: bold;
-    color: #17365d;
-}
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-p {
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-}
+/* ===============================
+   HEADER
+================================ */
 
 header {
     background-image: linear-gradient(
         to right,
-        #3498db,
-        #b3d9ff
+        #b3d9ff,
+        #e6f2ff
     );
 
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .subtitle {
+    font-size: 1rem;
+    color: rgb(60, 80, 100);
+}
+
+
+/* ===============================
+   TIÊU ĐỀ
+================================ */
+
+h1,
+h2 {
     text-align: center;
-    font-size: 18px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    background-color: #d9d9d9;
-    padding: 15px;
-    margin: 20px 0;
-
-    border-radius: 10px;
-}
-
-nav a {
     color: #17365d;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
 }
 
-nav a:hover {
-    background-color: #3498db;
-    color: white;
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
+
+
+/* ===============================
+   MAIN
+================================ */
 
 main {
-    width: 100%;
-}
+    width: 95%;
+    max-width: 1100px;
 
-footer {
-    text-align: center;
-    background-color: #d9eaf7;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 10px;
+    margin: 30px auto;
 }
 
 
-/* =========================================
-   BAI 1 - PROFILE
-========================================= */
+/* ===============================
+   BÀI 1: PROFILE CARD
+================================ */
 
 .profile {
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 700px;
 
-    padding: 25px;
-    margin: 30px auto;
-
-    border: 2px solid #3498db;
-    border-radius: 15px;
+    margin: 0 auto 40px auto;
+    padding: 30px;
 
     background-color: white;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #b3d9ff;
+    border-radius: 20px;
 
-    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
 }
 
-.profile p {
-    font-size: 18px;
+
+/* ID Selector */
+
+#avatar {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid #b3d9ff;
+
+    margin: 15px auto;
+}
+
+
+/* Element Selector */
+
+p {
+    font-size: 1rem;
     line-height: 1.8;
 }
 
-#avatar {
-    width: 150px;
-    height: 150px;
 
-    border-radius: 50%;
-    object-fit: cover;
+/* Descendant Selector */
 
-    display: block;
-    margin: 20px auto;
-
-    border: 4px solid #3498db;
-}
-
-.profile ul {
-    list-style-type: square;
-    padding-left: 30px;
-}
-
-.profile li {
+.profile p {
+    text-align: left;
     margin: 10px 0;
-    padding: 10px;
+}
 
-    background-color: #f2f2f2;
+
+/* Group Selector */
+
+h1,
+h2 {
+    letter-spacing: 1px;
+}
+
+
+/* Class Selector */
+
+.profile-info {
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+
+/* CSS List */
+
+.hobbies {
+    list-style-type: square;
+
+    max-width: 300px;
+
+    margin: 20px auto;
+    padding: 0;
+
+    text-align: left;
+}
+
+
+/* Khoảng cách giữa các mục */
+
+.hobbies li {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+
     border-radius: 8px;
 
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
-.profile li:hover {
+
+/* Pseudo-class */
+
+.hobbies li:hover {
     background-color: #b3d9ff;
+    color: #17365d;
 }
 
-.profile a {
+
+/* Link */
+
+a {
     color: #0066cc;
+
     text-decoration: none;
-}
 
-.profile a:hover {
-    color: red;
-}
-
-
-/* =========================================
-   BAI 2 - GRADE TABLE
-========================================= */
-
-.grade-container {
-    position: relative;
-
-    width: 90%;
-    max-width: 900px;
-
-    margin: 60px auto;
-    padding: 45px 20px 20px;
-
-    background-color: white;
-
-    border: 2px solid #3498db;
-    border-radius: 12px;
-
-    box-sizing: border-box;
-}
-
-.grade-label {
-    position: absolute;
-
-    top: 10px;
-    right: 15px;
-
-    background-color: #3498db;
-    color: white;
-
-    padding: 8px 15px;
-
-    border-radius: 5px;
     font-weight: bold;
 }
 
-.grade-table {
+
+/* Link khi di chuột */
+
+a:hover {
+    color: #ff6600;
+
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   BÀI 2: BẢNG ĐIỂM
+================================ */
+
+.score-section {
+    width: 100%;
+
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Position Relative */
+
+.table-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 40px auto 30px auto;
+
+    padding: 35px 15px 15px;
+
+    border: 2px solid #b3d9ff;
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+
+/* Position Absolute */
+
+.table-label {
+    position: absolute;
+
+    top: -18px;
+    right: 20px;
+
+    padding: 5px 20px;
+
+    background-color: #17365d;
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    border-radius: 8px;
+}
+
+
+/* Table */
+
+table {
     width: 100%;
     max-width: 850px;
 
@@ -199,237 +268,371 @@ footer {
 
     border-collapse: collapse;
 
-    font-size: 16px;
+    font-size: 0.95rem;
 }
 
-.grade-table th,
-.grade-table td {
+
+/* Table Cell */
+
+th,
+td {
+    padding: 12px 10px;
+
     border: 1px solid #cccccc;
-    padding: 12px;
+
+    text-align: left;
 }
 
-.grade-table thead {
-    background-color: #3498db;
+
+/* Table Header */
+
+thead {
+    background-color: #17365d;
     color: white;
 }
 
-.grade-table th:first-child,
-.grade-table td:first-child,
-.grade-table th:last-child,
-.grade-table td:last-child {
+
+/* Center STT and Score */
+
+th:first-child,
+td:first-child,
+th:last-child,
+td:last-child {
     text-align: center;
 }
 
-.grade-table tbody tr:nth-child(even) {
-    background-color: #e6f2ff;
+
+/* Zebra Stripes */
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f8ff;
 }
 
-.grade-table tbody tr:nth-child(odd) {
-    background-color: white;
+tbody tr:nth-child(even) {
+    background-color: #e0efff;
 }
 
-.grade-table tbody tr:hover {
+
+/* Hover Row */
+
+tbody tr:hover {
     background-color: #b3d9ff;
 }
 
-.grade-table tfoot .average {
+
+/* Average Score */
+
+tfoot {
     background-color: #d9ead3;
+
     font-weight: bold;
     color: #17365d;
 }
 
-.grade-table tfoot td {
-    padding: 15px;
+tfoot td {
+    font-weight: bold;
 }
 
 
-/* =========================================
-   BAI 3 - FORM
-========================================= */
+/* Grade Table */
+
+.grade-title {
+    text-align: center;
+    color: #17365d;
+
+    margin-top: 35px;
+}
+
+.grade-table {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 20px auto;
+}
+
+
+/* ===============================
+   BÀI 3: FORM ĐĂNG KÝ
+================================ */
+
+.register-section {
+    width: 100%;
+
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form Container */
 
 .form-container {
     position: relative;
 
-    width: 90%;
+    width: 100%;
     max-width: 700px;
 
-    margin: 60px auto;
-    padding: 45px 25px 25px;
+    margin: 40px auto 20px auto;
 
-    background-color: #f0f8ff;
+    padding: 40px 25px 25px;
 
-    border: 2px solid #3498db;
+    background-color: #f8fbff;
+
+    border: 2px solid #b3d9ff;
     border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
-    box-sizing: border-box;
 }
+
+
+/* Form Label */
 
 .form-label {
     position: absolute;
 
-    top: 10px;
-    right: 15px;
+    top: -18px;
+    right: 20px;
 
-    background-color: #3498db;
+    padding: 5px 15px;
+
+    background-color: #17365d;
     color: white;
 
-    padding: 8px 12px;
-
-    border-radius: 5px;
     font-weight: bold;
+    font-size: 0.9rem;
+
+    border-radius: 8px;
 }
 
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+
+/* Form */
+
+form {
+    width: 100%;
 }
+
+
+/* Flexbox: Họ tên và Email */
 
 .form-row {
     display: flex;
-    gap: 20px;
+
+    flex-direction: row;
+
     flex-wrap: wrap;
+
+    gap: 20px;
 }
+
+
+/* Form Group */
 
 .form-group {
     display: flex;
+
     flex-direction: column;
 
     flex: 1;
+
     min-width: 0;
 
-    gap: 8px;
+    margin-bottom: 20px;
 }
+
+
+/* Label */
 
 .form-group > label {
+    margin-bottom: 8px;
+
     font-weight: bold;
-    color: #333333;
+    color: #17365d;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="date"],
-.form-group select,
-.form-group textarea {
+
+/* Input */
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
 
     padding: 12px;
 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
     border: 1px solid #cccccc;
     border-radius: 8px;
 
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    background-color: white;
 
-    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+
+/* Focus */
+
+input:focus,
+select:focus,
+textarea:focus {
     outline: none;
 
-    border-color: #3498db;
+    border: 2px solid #0066cc;
 
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+    background-color: #f0f8ff;
 }
 
-.choice-row {
+
+/* Radio and Checkbox */
+
+.inline-options {
     display: flex;
+
     flex-direction: row;
+
     flex-wrap: wrap;
 
-    gap: 20px;
+    gap: 15px;
 }
 
-.choice-row label {
+.inline-options label {
     display: flex;
+
     align-items: center;
-    gap: 8px;
+
+    gap: 5px;
 
     cursor: pointer;
 }
 
-.button-row {
+
+/* Button Flexbox */
+
+.form-buttons {
     display: flex;
+
+    flex-direction: row;
+
     justify-content: center;
 
+    flex-wrap: wrap;
+
     gap: 15px;
-    margin-top: 10px;
+
+    margin-top: 25px;
 }
 
-.button-row button {
-    padding: 12px 25px;
 
-    background-color: #3498db;
+/* Register Button */
+
+button {
+    padding: 12px 30px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
     color: white;
+
+    background-color: #0066cc;
 
     border: none;
     border-radius: 8px;
 
-    font-size: 16px;
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
-.button-row button:hover {
-    background-color: #17365d;
+
+/* Button Hover */
+
+button:hover {
+    background-color: #004080;
 }
 
-.button-row .reset-button {
+
+/* Reset Button */
+
+.reset-button {
     background-color: #777777;
 }
 
-.button-row .reset-button:hover {
+.reset-button:hover {
     background-color: #444444;
 }
 
 
-/* =========================================
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    background-color: #17365d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ===============================
    RESPONSIVE
-========================================= */
+================================ */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
-    body {
-        padding: 10px;
+    main {
+        width: 95%;
     }
 
-    .profile {
-        width: 100%;
-    }
-
-    .grade-container {
-        width: 100%;
-        padding: 45px 10px 10px;
-    }
-
-    .grade-table {
-        font-size: 13px;
-    }
-
-    .grade-table th,
-    .grade-table td {
-        padding: 8px 5px;
-    }
-
-    .form-container {
-        width: 100%;
-        padding: 45px 15px 20px;
+    .profile,
+    .score-section,
+    .register-section {
+        padding: 15px;
     }
 
     .form-row {
         flex-direction: column;
+        gap: 0;
     }
 
-    .button-row {
+    .form-group {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+
+    .inline-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons {
         flex-direction: column;
     }
 
-    .button-row button {
+    button {
         width: 100%;
     }
 }
