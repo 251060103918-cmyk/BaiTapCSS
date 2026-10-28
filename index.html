@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bài thực hành CSS - Vũ Việt Nhật</title>
+    <title>Bài tập thực hành CSS</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Internal CSS -->
     <style>
@@ -15,104 +17,170 @@
             color: #17365d;
         }
 
-        .profile p {
-            font-size: 18px;
-            line-height: 1.8;
+        .profile h2 {
+            font-family: Georgia, serif;
+            font-style: italic;
         }
 
-        .profile li:hover {
+        .hobbies li {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .hobbies li:hover {
             background-color: #b3d9ff;
+            color: #17365d;
         }
     </style>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= BÀI 1 ================= -->
     <header>
         <h1 style="color: darkblue;">
-            BÀI THỰC HÀNH CSS
+            BÀI TẬP THỰC HÀNH CSS
         </h1>
 
         <p class="subtitle">
-            Thông tin cá nhân - Bảng điểm - Đăng ký sinh viên
+            Thông tin cá nhân - Bảng điểm - Form đăng ký
         </p>
     </header>
 
-    <!-- MENU -->
-    <nav>
-        <a href="#profile">Bài 1: Cá nhân</a>
-        <a href="#grades">Bài 2: Bảng điểm</a>
-        <a href="#register">Bài 3: Đăng ký</a>
-    </nav>
-
     <main>
 
-        <!-- ================= BAI 1 ================= -->
-
-        <section id="profile" class="profile">
-
+        <!-- Bài 1: Thông tin cá nhân -->
+        <section class="profile">
             <h2>BÀI 1: THÔNG TIN CÁ NHÂN</h2>
 
             <img
                 id="avatar"
-                src="images/3.jpg"
+                src="3.jpg"
                 alt="Ảnh đại diện Vũ Việt Nhật"
             >
 
-            <p>
-                <strong>Họ tên:</strong>
-                Vũ Việt Nhật
-            </p>
+            <div class="profile-info">
+                <p>
+                    <strong>Họ và tên:</strong>
+                    Vũ Việt Nhật
+                </p>
 
-            <p>
-                <strong>Năm sinh:</strong>
-                07/02/2007
-            </p>
+                <p>
+                    <strong>Năm sinh:</strong>
+                    07/02/2007
+                </p>
 
-            <p>
-                <strong>Sở thích:</strong>
-            </p>
+                <p>
+                    <strong>Sở thích:</strong>
+                    Cầu lông, Chơi Game
+                </p>
+            </div>
 
-            <ul>
+            <h2>Danh sách sở thích</h2>
+
+            <ul class="hobbies">
                 <li>Cầu lông</li>
                 <li>Chơi Game</li>
             </ul>
 
             <p>
-                <a href="https://github.com">
-                    GitHub
+                <a href="https://www.phenikaa-uni.edu.vn/"
+                   target="_blank">
+                    Trường Đại học Phenikaa
                 </a>
             </p>
-
         </section>
 
 
-        <!-- ================= BAI 2 ================= -->
-
-        <section id="grades" class="grade-container">
-
-            <span class="grade-label">
-                BẢNG ĐIỂM
-            </span>
+        <!-- ================= BÀI 2 ================= -->
+        <section class="score-section">
 
             <h2>BÀI 2: BẢNG ĐIỂM SINH VIÊN</h2>
+
+            <div class="table-container">
+
+                <span class="table-label">
+                    BẢNG ĐIỂM
+                </span>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên học phần</th>
+                            <th>Điểm</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Kỹ năng giao tiếp và làm việc nhóm</td>
+                            <td>B+</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                Nhập môn Khoa học dữ liệu và trí tuệ nhân tạo
+                            </td>
+                            <td>B</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Triết học Mác - Lê nin</td>
+                            <td>B</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                Phương pháp nghiên cứu khoa học trong kinh tế
+                            </td>
+                            <td>C</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Marketing căn bản</td>
+                            <td>C</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                Điểm trung bình
+                            </td>
+
+                            <td>6</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+
+            <h3 class="grade-title">
+                Điểm trung bình từng học phần
+            </h3>
 
             <table class="grade-table">
 
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Tên học phần</th>
-                        <th>Điểm</th>
+                        <th>Học phần</th>
+                        <th>Điểm trung bình</th>
                     </tr>
                 </thead>
 
                 <tbody>
-
                     <tr>
                         <td>1</td>
                         <td>Kỹ năng giao tiếp và làm việc nhóm</td>
@@ -128,7 +196,7 @@
                     <tr>
                         <td>3</td>
                         <td>Triết học Mác - Lê nin</td>
-                        <td>7,0</td>
+                        <td>7</td>
                     </tr>
 
                     <tr>
@@ -140,232 +208,229 @@
                     <tr>
                         <td>5</td>
                         <td>Marketing căn bản</td>
-                        <td>6,0</td>
+                        <td>6</td>
                     </tr>
-
                 </tbody>
-
-                <tfoot>
-                    <tr class="average">
-                        <td colspan="2">
-                            Điểm trung bình
-                        </td>
-
-                        <td>6,88</td>
-                    </tr>
-                </tfoot>
 
             </table>
 
         </section>
 
 
-        <!-- ================= BAI 3 ================= -->
-
-        <section id="register" class="form-container">
-
-            <span class="form-label">
-                ĐĂNG KÝ MỚI
-            </span>
+        <!-- ================= BÀI 3 ================= -->
+        <section class="register-section">
 
             <h2>BÀI 3: FORM ĐĂNG KÝ SINH VIÊN</h2>
 
-            <form action="#" method="post">
+            <div class="form-container">
 
-                <!-- Họ tên và Email -->
-                <div class="form-row">
+                <span class="form-label">
+                    ĐĂNG KÝ MỚI
+                </span>
+
+                <form action="#" method="post">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="fullname">
+                                Họ và tên
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Nhập họ và tên"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Nhập email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
 
                     <div class="form-group">
 
-                        <label for="fullname">
-                            Họ và tên:
+                        <label for="birth">
+                            Ngày sinh
                         </label>
 
                         <input
-                            type="text"
-                            id="fullname"
-                            name="fullname"
-                            placeholder="Nhập họ và tên"
-                            required
+                            type="date"
+                            id="birth"
+                            name="birth"
                         >
 
                     </div>
 
+
                     <div class="form-group">
 
-                        <label for="email">
-                            Email:
-                        </label>
+                        <label>Giới tính</label>
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Nhập email"
-                            required
-                        >
+                        <div class="inline-options">
 
-                    </div>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="nam"
+                                >
+                                Nam
+                            </label>
 
-                </div>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="nu"
+                                >
+                                Nữ
+                            </label>
 
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="khac"
+                                >
+                                Khác
+                            </label>
 
-                <!-- Ngày sinh -->
-                <div class="form-group">
-
-                    <label for="birthday">
-                        Ngày sinh:
-                    </label>
-
-                    <input
-                        type="date"
-                        id="birthday"
-                        name="birthday"
-                    >
-
-                </div>
-
-
-                <!-- Giới tính -->
-                <div class="form-group">
-
-                    <label>Giới tính:</label>
-
-                    <div class="choice-row">
-
-                        <label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="nam"
-                            >
-                            Nam
-                        </label>
-
-                        <label>
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="nu"
-                            >
-                            Nữ
-                        </label>
+                        </div>
 
                     </div>
 
-                </div>
 
+                    <div class="form-group">
 
-                <!-- Sở thích -->
-                <div class="form-group">
+                        <label>Sở thích</label>
 
-                    <label>Sở thích:</label>
+                        <div class="inline-options">
 
-                    <div class="choice-row">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="hobby"
+                                    value="caulong"
+                                >
+                                Cầu lông
+                            </label>
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="hobby"
-                                value="badminton"
-                            >
-                            Cầu lông
-                        </label>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="hobby"
+                                    value="game"
+                                >
+                                Chơi Game
+                            </label>
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="hobby"
-                                value="gaming"
-                            >
-                            Chơi Game
-                        </label>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="hobby"
+                                    value="music"
+                                >
+                                Âm nhạc
+                            </label>
+
+                        </div>
 
                     </div>
 
-                </div>
+
+                    <div class="form-group">
+
+                        <label for="major">
+                            Ngành học
+                        </label>
+
+                        <select id="major" name="major">
+
+                            <option value="">
+                                Chọn ngành học
+                            </option>
+
+                            <option value="cntt">
+                                Công nghệ thông tin
+                            </option>
+
+                            <option value="marketing">
+                                Marketing
+                            </option>
+
+                            <option value="kinhte">
+                                Kinh tế
+                            </option>
+
+                        </select>
+
+                    </div>
 
 
-                <!-- Ngành học -->
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <label for="major">
-                        Ngành học:
-                    </label>
+                        <label for="message">
+                            Ghi chú
+                        </label>
 
-                    <select id="major" name="major">
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Nhập ghi chú"
+                        ></textarea>
 
-                        <option value="">
-                            -- Chọn ngành học --
-                        </option>
-
-                        <option value="cntt">
-                            Công nghệ thông tin
-                        </option>
-
-                        <option value="marketing">
-                            Marketing
-                        </option>
-
-                        <option value="kinhte">
-                            Kinh tế
-                        </option>
-
-                    </select>
-
-                </div>
+                    </div>
 
 
-                <!-- Ghi chú -->
-                <div class="form-group">
+                    <div class="form-buttons">
 
-                    <label for="message">
-                        Ghi chú:
-                    </label>
+                        <button type="submit">
+                            Đăng ký
+                        </button>
 
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        placeholder="Nhập ghi chú"
-                    ></textarea>
+                        <button type="reset" class="reset-button">
+                            Làm lại
+                        </button>
 
-                </div>
+                    </div>
 
+                </form>
 
-                <!-- Buttons -->
-                <div class="button-row">
-
-                    <button type="submit">
-                        Đăng ký
-                    </button>
-
-                    <button type="reset" class="reset-button">
-                        Làm lại
-                    </button>
-
-                </div>
-
-            </form>
+            </div>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
     <footer>
 
         <p>
-            © 2026 - Vũ Việt Nhật
+            Sinh viên: Vũ Việt Nhật
         </p>
 
         <p>
-            Bài thực hành HTML và CSS
+            Bài tập thực hành HTML và CSS
         </p>
 
     </footer>
 
 </body>
-
 </html>
