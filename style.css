@@ -1,91 +1,435 @@
 
-/* Element Selector */
+/* =========================================
+   CSS CHUNG
+========================================= */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     background-color: #e6f2ff;
+    color: #333333;
     margin: 0;
     padding: 20px;
 }
 
-/* Group Selector */
 h1, h2 {
-    font-weight: bold;
     text-align: center;
+    font-weight: bold;
+    color: #17365d;
 }
 
-/* Class Selector */
-.profile {
-    width: 80%;
-    max-width: 500px;
-    padding: 25px;
-    margin: 30px auto;
-    border: 2px solid #3498db;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+h1 {
+    font-size: 32px;
 }
 
-/* Descendant Selector */
-.profile p {
-    color: rgb(40, 40, 40);
-    font-size: 18px;
+h2 {
+    font-size: 24px;
+}
+
+p {
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
 
-/* ID Selector */
-#avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto;
-}
-
-/* List */
-ul {
-    list-style-type: square;
-    padding-left: 30px;
-}
-
-li {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f2f2f2;
-}
-
-/* Pseudo-class */
-li:hover {
-    background-color: #b3d9ff;
-}
-
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    color: red;
-}
-
-/* Header background */
 header {
     background-image: linear-gradient(
         to right,
         #3498db,
         #b3d9ff
     );
-    padding: 20px;
+
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    background-color: #d9d9d9;
+    padding: 15px;
+    margin: 20px 0;
+
     border-radius: 10px;
 }
 
-/* Footer */
+nav a {
+    color: #17365d;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+main {
+    width: 100%;
+}
+
 footer {
     text-align: center;
-    color: #555555;
+    background-color: #d9eaf7;
     padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   BAI 1 - PROFILE
+========================================= */
+
+.profile {
+    width: 80%;
+    max-width: 500px;
+
+    padding: 25px;
+    margin: 30px auto;
+
+    border: 2px solid #3498db;
+    border-radius: 15px;
+
+    background-color: white;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    box-sizing: border-box;
+}
+
+.profile p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    display: block;
+    margin: 20px auto;
+
+    border: 4px solid #3498db;
+}
+
+.profile ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+.profile li {
+    margin: 10px 0;
+    padding: 10px;
+
+    background-color: #f2f2f2;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.profile li:hover {
+    background-color: #b3d9ff;
+}
+
+.profile a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    color: red;
+}
+
+
+/* =========================================
+   BAI 2 - GRADE TABLE
+========================================= */
+
+.grade-container {
+    position: relative;
+
+    width: 90%;
+    max-width: 900px;
+
+    margin: 60px auto;
+    padding: 45px 20px 20px;
+
+    background-color: white;
+
+    border: 2px solid #3498db;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+.grade-label {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    background-color: #3498db;
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.grade-table {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    border-collapse: collapse;
+
+    font-size: 16px;
+}
+
+.grade-table th,
+.grade-table td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+}
+
+.grade-table thead {
+    background-color: #3498db;
+    color: white;
+}
+
+.grade-table th:first-child,
+.grade-table td:first-child,
+.grade-table th:last-child,
+.grade-table td:last-child {
+    text-align: center;
+}
+
+.grade-table tbody tr:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+.grade-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+.grade-table tbody tr:hover {
+    background-color: #b3d9ff;
+}
+
+.grade-table tfoot .average {
+    background-color: #d9ead3;
+    font-weight: bold;
+    color: #17365d;
+}
+
+.grade-table tfoot td {
+    padding: 15px;
+}
+
+
+/* =========================================
+   BAI 3 - FORM
+========================================= */
+
+.form-container {
+    position: relative;
+
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto;
+    padding: 45px 25px 25px;
+
+    background-color: #f0f8ff;
+
+    border: 2px solid #3498db;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+.form-label {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    background-color: #3498db;
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-width: 0;
+
+    gap: 8px;
+}
+
+.form-group > label {
+    font-weight: bold;
+    color: #333333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #3498db;
+
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+.choice-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.choice-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-row button {
+    padding: 12px 25px;
+
+    background-color: #3498db;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.button-row button:hover {
+    background-color: #17365d;
+}
+
+.button-row .reset-button {
+    background-color: #777777;
+}
+
+.button-row .reset-button:hover {
+    background-color: #444444;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .profile {
+        width: 100%;
+    }
+
+    .grade-container {
+        width: 100%;
+        padding: 45px 10px 10px;
+    }
+
+    .grade-table {
+        font-size: 13px;
+    }
+
+    .grade-table th,
+    .grade-table td {
+        padding: 8px 5px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 45px 15px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button-row button {
+        width: 100%;
+    }
 }
