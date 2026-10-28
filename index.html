@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -12,31 +13,34 @@
 
     <!-- Internal CSS -->
     <style>
+        /* Group Selector */
         h1, h2 {
             text-align: center;
             color: #17365d;
         }
 
-        .profile h2 {
-            font-family: Georgia, serif;
-            font-style: italic;
+        /* Descendant Selector */
+        .profile p {
+            line-height: 1.8;
         }
 
+        /* Class Selector */
         .hobbies label {
             font-size: 1.1rem;
             font-weight: 500;
         }
 
+        /* Pseudo-class */
         .hobbies label:hover {
             background-color: #b3d9ff;
-            color: #17365d;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
+
     <header>
         <h1 style="color: darkblue;">
             BÀI TẬP THỰC HÀNH CSS
@@ -89,9 +93,9 @@
 
             </div>
 
+            <!-- Sở thích -->
             <h2>Sở thích</h2>
 
-            <!-- Checkbox sở thích -->
             <div class="hobbies">
 
                 <label>
@@ -110,24 +114,6 @@
                         value="game"
                     >
                     Chơi Game
-                </label>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="hobby"
-                        value="music"
-                    >
-                    Âm nhạc
-                </label>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="hobby"
-                        value="reading"
-                    >
-                    Đọc sách
                 </label>
 
             </div>
@@ -152,6 +138,7 @@
 
             <div class="table-container">
 
+                <!-- Position Absolute -->
                 <span class="table-label">
                     BẢNG ĐIỂM
                 </span>
@@ -170,6 +157,7 @@
 
                         <tr>
                             <td>1</td>
+
                             <td>
                                 <input
                                     type="text"
@@ -177,6 +165,7 @@
                                     placeholder="Nhập tên học phần"
                                 >
                             </td>
+
                             <td>
                                 <input
                                     type="text"
@@ -188,6 +177,7 @@
 
                         <tr>
                             <td>2</td>
+
                             <td>
                                 <input
                                     type="text"
@@ -195,6 +185,7 @@
                                     placeholder="Nhập tên học phần"
                                 >
                             </td>
+
                             <td>
                                 <input
                                     type="text"
@@ -206,6 +197,7 @@
 
                         <tr>
                             <td>3</td>
+
                             <td>
                                 <input
                                     type="text"
@@ -213,6 +205,7 @@
                                     placeholder="Nhập tên học phần"
                                 >
                             </td>
+
                             <td>
                                 <input
                                     type="text"
@@ -224,6 +217,7 @@
 
                         <tr>
                             <td>4</td>
+
                             <td>
                                 <input
                                     type="text"
@@ -231,6 +225,7 @@
                                     placeholder="Nhập tên học phần"
                                 >
                             </td>
+
                             <td>
                                 <input
                                     type="text"
@@ -242,6 +237,7 @@
 
                         <tr>
                             <td>5</td>
+
                             <td>
                                 <input
                                     type="text"
@@ -249,6 +245,7 @@
                                     placeholder="Nhập tên học phần"
                                 >
                             </td>
+
                             <td>
                                 <input
                                     type="text"
@@ -293,6 +290,7 @@
 
             <div class="form-container">
 
+                <!-- Position Absolute -->
                 <span class="form-label">
                     ĐĂNG KÝ MỚI
                 </span>
@@ -503,7 +501,8 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
         <p>
